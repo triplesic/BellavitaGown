@@ -1,3 +1,4 @@
+-- *** add header ***
 -- phpMyAdmin SQL Dump
 -- version 4.2.11
 -- http://www.phpmyadmin.net
@@ -18,7 +19,7 @@ SET time_zone = "+00:00";
 
 --
 -- Database: `bellavitagown`
---test
+--
 
 -- --------------------------------------------------------
 
