@@ -25,15 +25,32 @@
 					<h2 class="or">OR</h2>
 				</div>
 				<div class="col-sm-4">
-					<div class="signup-form"><!--sign up form-->
+					<div ><!--sign up form-->
 						<h2>New User Signup!</h2>
-						<form action="#">
-							<input type="text" placeholder="Name"/>
-							<input type="email" placeholder="Email Address"/>
-							<input type="password" placeholder="Password"/>
-							<textarea name="message" id="message" rows="8" placeholder=" Address"></textarea>
-							<button type="submit" class="btn btn-default">Signup</button>
-						</form>
+						<form id="main-contact-form" class="contact-form row" name="contact-form" method="post">
+				            
+				            <div class="form-group col-md-12">
+				                <input type="text" name="subject" class="form-control" required="required" placeholder="Email">
+				            </div>
+				     		<div class="form-group col-md-12">
+				                <input type="text" name="subject" class="form-control" required="required" placeholder="Password">
+				            </div>
+				            <div class="form-group col-md-12">
+				                <input type="text" name="subject" class="form-control" required="required" placeholder="Confirm Password">
+				            </div>
+				            <div class="form-group col-md-6">
+				                <input type="text" name="firstName" class="form-control" required="required" placeholder="Firstname">
+				            </div>
+				            <div class="form-group col-md-6">
+				                <input type="email" name="Lastname" class="form-control" required="required" placeholder="Lastname">
+				            </div>
+				            <div class="form-group col-md-12">
+				                <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Address"></textarea>
+				            </div>                        
+				            <div class="form-group col-md-12">
+				                <input type="submit" name="submit" class="btn btn-primary pull-right" value="Submit">
+				            </div>
+				        </form>
 					</div><!--/sign up form-->
 				</div>
 			</div>

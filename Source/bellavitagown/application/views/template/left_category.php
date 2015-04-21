@@ -4,9 +4,9 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#sportswear">
+										<a data-toggle="collapse" data-parent="#accordian" href="catalog/detail/json?cID=1">
 											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-											เสื้อกาวน์
+											<a href="<?php echo base_url();?>catalog/detail/json?cID=1">เสื้อกาวน์</a>
 										</a>
 									</h4>
 								</div>
@@ -24,9 +24,9 @@
 							<div class="panel panel-default">
 								<div class="panel-heading">
 									<h4 class="panel-title">
-										<a data-toggle="collapse" data-parent="#accordian" href="#mens">
+										<a data-toggle="collapse" data-parent="#accordian" href="catalog/detail/json?cID=2">
 											<span class="badge pull-right"><i class="fa fa-plus"></i></span>
-											เสื้อผ่าตัดใหญ่
+											<a href="<?php echo base_url();?>catalog/detail/json?cID=2">เสื้อผ่าตัดใหญ่</a>
 										</a>
 									</h4>
 								</div>

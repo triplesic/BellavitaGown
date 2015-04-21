@@ -33,7 +33,7 @@
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
 								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> pearl@bellavitagown.com</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -93,11 +93,11 @@
 <!-- 								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li> -->
 								<li>
 								<?php  if($userType == NULL){?>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><?php echo anchor('login', '<i class="fa fa-lock"></i>Login');?></li>
 						<?php }else { ?>
 								<li><a href="#"><i class="fa fa-user"></i><?php echo $firstName; ?> <?php echo $lastName; ?></a></li>
-								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><?php echo anchor('login/logout', '<i class="fa fa-lock"></i>Logout');?></li>
 							<?php }?>	
 								</li>
@@ -127,17 +127,17 @@
 <!-- 								<a href="index.html" class="active">Home</a> -->
 								</li>
 <!-- 								<li><a href="shop.html">Catalogue</a></li> -->
-								<li class="dropdown"><a href="shop.html">Catalogue<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="#">Catalogue<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">
-                                        <li><a href="#">เสื้อกาวน์</a></li>
-										<li><a href="#">เสื้อผ่าตัดใหญ่</a></li> 
+                                        <li><a href="<?php echo base_url();?>catalog/detail/json?cID=1">เสื้อกาวน์</a></li>
+										<li><a href="<?php echo base_url();?>catalog/detail/json?cID=2">เสื้อผ่าตัดใหญ่</a></li> 
 <!-- 										<li><a href="#">Type 3</a></li>  -->
 <!-- 										<li><a href="#">other</a></li>  -->
                                     </ul>
                                 </li> 
 							<?php if($userType == "admin"){?>
-                                <li><a href="contact-us.html">Order</a></li>
-                                <li><a href="contact-us.html">Receive Order</a></li>
+                                <li><a href="#">Order</a></li>
+                                <li><a href="c#">Receive Order</a></li>
                             <?php }else if($userType == "user") {?>
                             	<li><a href="contact-us.html">Order</a></li>
                             <?php }?>
@@ -148,7 +148,9 @@
 <!--                                     </ul> -->
 <!--                                 </li>  -->
 <!-- 								<li><a href="404.html">404</a></li> -->
-								<li><a href="contact-us.html">Contact</a></li>
+								<li>
+								<?php echo anchor('contact', 'Contact');?>
+								</li>
 							</ul>
 						</div>
 					</div>
