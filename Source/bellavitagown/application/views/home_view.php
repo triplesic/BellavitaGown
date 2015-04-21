@@ -20,7 +20,7 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/img01.jpg" class="girl img-responsive" alt="" />
+									<img src="<?php echo base_url();?>/images/img01.jpg" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							<div class="item">
@@ -31,7 +31,7 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/img02.jpg" class="girl img-responsive" alt="" />
+									<img src="<?php echo base_url();?>/images/img02.jpg" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							
@@ -43,7 +43,7 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="images/img03.jpg" class="girl img-responsive" alt="" />
+									<img src="<?php echo base_url();?>/images/img03.jpg" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							
@@ -73,67 +73,37 @@
 					<div class="features_items"><!--features_items-->
 						<h2 class="title text-center">New Arrivals :: สินค้ามาใหม่</h2>
 						
-		<?php
-$amountNewProduct = count($productData);
-
-for ($i = 0; $i < $amountNewProduct; $i++) {
-?>
-		
-		<div class="col-sm-4">
+		<?php foreach ($productData as $product): ?>
+			<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
 										<div class="productinfo text-center">
-											<img src=<?php echo base_url();?>images/<?php echo $productData[$i]->IMAGE_NAME?> alt="" />
-											<h2><?php echo $productData[$i]->PRICE?></h2>
-											<p><?php echo $productData[$i]->PRODUCT_NM_TH?></p>
-											<a href="product/detail/json?pID=<?php echo $productData[$i]->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
+											<img src=<?php echo base_url();?>images/<?php echo $product->IMAGE_NAME?> alt="" />
+											<h2><?php echo $product->PRICE?></h2>
+											<p><?php echo $product->PRODUCT_NM_TH?></p>
+											<a href="product/detail/json?pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>สั่งซื้อ</a>
 											
 										</div>
 								</div>
 							</div>
 						</div>
-						
-		
-		
-		
-
-		<?php
-
-}
-?>	
+		<?php endforeach ?>	
 					</div><!--features_items-->				
 					<div class="recommended_items"><!--recommended_items-->
 						<h2 class="title text-center">Top Recommended :: สินค้าแนะนำ</h2>
 						
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
-									<?php
-
-$amountNewProduct = count($productData);
-
-for ($i = 0; $i < $amountNewProduct; $i++) {
-?>
-		
-
-			<?php
-
-	if ($i < 3) {
-?>
-			
-						<?php
-
-		if ($i == 0) {
-?>
-					<div class="item active">
-			
-			
-			<?php
-
-		}
-?>
-			
-			<div class="col-sm-4">
+						
+						<?php $amountNewProduct = count($productData);
+						for ($i = 0; $i < $amountNewProduct; $i++) { ?>
+						
+									<?php if ($i < 3) { ?>
+									<?php if ($i == 0) { ?>
+								<div class="item active">
+									<?php } ?>
+									<div class="col-sm-4">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
@@ -141,87 +111,35 @@ for ($i = 0; $i < $amountNewProduct; $i++) {
 											<h2><?php echo $productData[$i]->PRICE?></h2>
 											<p><?php echo $productData[$i]->PRODUCT_NM_TH?></p>
 											<a href="product-details.html" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>สั่งซื้อ</a></div>
-												
+											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>สั่งซื้อ</a></div>												
 											</div>
 										</div>
-		</div>
-			
-			<?php
-
-		if ($i == 2) {
-?>
-					</div>
-
-			<?php
-
-		}
-?>
-			
-			
-			<?php
-
-	}
-?>
-		
-			<?php
-
-	if ($i >= 3 && $i <= 5) {
-?>
-			
-						<?php
-
-		if ($i == 3) {
-?>
-					<div class="item">
-			
-			
-			<?php
-
-		}
-?>
-			
-			<div class="col-sm-4">
+									</div>
+									<?php if ($i == 2) { ?>
+								</div>
+									<?php } ?>
+									<?php } ?>
+									<?php if ($i >= 3 && $i <= 5) { ?>
+									<?php if ($i == 3) { ?>
+								<div class="item">
+									<?php } ?>
+									<div class="col-sm-4">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src=<?php echo base_url();?>images/<?php echo $productData[$i]->IMAGE_NAME?> alt="" />
 											<h2><?php echo $productData[$i]->PRICE?></h2>
-											<p><?php echo $productData[$i]->PRODUCT_NM_TH?></p>
-											
+											<p><?php echo $productData[$i]->PRODUCT_NM_TH?></p>	
 											<a href="product-details.html" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
 											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>สั่งซื้อ</a></div>
-												
 											</div>
 										</div>
-		</div>
-			
-			<?php
-
-		if ($i == 5) {
-?>
-					</div>
-
-			<?php
-
-		}
-?>
-			
-			
-			<?php
-
-	}
-?>					
-									
-							
-		
-	
-		<?php
-
-}
-?>	
-							
-								
+									</div>
+									<?php if ($i == 5) { ?>
+								</div>
+									<?php } ?>
+									<?php } ?>					
+									<?php } ?>	
 							</div>
 							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
 								<i class="fa fa-angle-left"></i>
