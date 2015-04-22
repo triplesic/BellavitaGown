@@ -1,6 +1,7 @@
 <?php $this->load->view('template/header');?>
 
-	<section id="slider"><!--slider-->
+	<!--slider-->
+	<section id="slider">
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-12">
@@ -60,7 +61,8 @@
 				</div>
 			</div>
 		</div>
-	</section><!--/slider-->
+	</section>
+	<!--/slider-->
 	
 	<section>
 		<div class="container">
@@ -70,26 +72,25 @@
 				</div>
 				
 				<div class="col-sm-9 padding-right">
-				
+					
 					<!--features_items-->
 					<div class="features_items">
 						<h2 class="title text-center">New Arrivals :: สินค้ามาใหม่</h2>
-		<?php foreach ($productData as $product): ?>
-			<div class="col-sm-4">
+					<?php foreach ($productData as $product): ?>
+						<div class="col-sm-4">
 							<div class="product-image-wrapper">
 								<div class="single-products">
-										<div class="productinfo text-center">
-											<img src=<?php echo base_url();?>images/<?php echo $product->IMAGE_NAME?> alt="" />
-											<h2><?php echo $product->PRICE?></h2>
-											<p><?php echo $product->PRODUCT_NM_TH?></p>
-											<a href="product/detail/json?pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>สั่งซื้อ</a>
-											
-										</div>
+									<div class="productinfo text-center">
+										<img src=<?php echo base_url();?>images/<?php echo $product->IMAGE_NAME?> alt="" />
+										<h2><?php echo $product->PRICE?></h2>
+										<p><?php echo $product->PRODUCT_NM_TH?></p>
+										<a href="product/detail/json?pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
+										<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>สั่งซื้อ</a>
+									</div>
 								</div>
 							</div>
 						</div>
-		<?php endforeach ?>	
+					<?php endforeach ?>	
 					</div>
 					<!--features_items-->		
 					
