@@ -70,9 +70,10 @@
 				</div>
 				
 				<div class="col-sm-9 padding-right">
-					<div class="features_items"><!--features_items-->
+				
+					<!--features_items-->
+					<div class="features_items">
 						<h2 class="title text-center">New Arrivals :: สินค้ามาใหม่</h2>
-						
 		<?php foreach ($productData as $product): ?>
 			<div class="col-sm-4">
 							<div class="product-image-wrapper">
@@ -89,66 +90,53 @@
 							</div>
 						</div>
 		<?php endforeach ?>	
-					</div><!--features_items-->				
-					<div class="recommended_items"><!--recommended_items-->
+					</div>
+					<!--features_items-->		
+					
+					<!--recommended_items-->
+					<div class="recommended_items">
 						<h2 class="title text-center">Top Recommended :: สินค้าแนะนำ</h2>
 						
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
-						
-						<?php $amountNewProduct = count($productData);
-						for ($i = 0; $i < $amountNewProduct; $i++) { ?>
-						
-									<?php if ($i < 3) { ?>
-									<?php if ($i == 0) { ?>
-								<div class="item active">
-									<?php } ?>
+								<?php $index = 0 ?>
+								<?php foreach ($productData as $product): ?>
+								<?php if($index == 0) 
+									{
+										echo '<div class="item active">';
+									}
+									else if($index == 3)
+									{
+										echo '</div>';
+										echo '<div class="item">';
+									}
+									$index++;
+								?>
 									<div class="col-sm-4">
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src=<?php echo base_url();?>images/<?php echo $productData[$i]->IMAGE_NAME?> alt="" />
-											<h2><?php echo $productData[$i]->PRICE?></h2>
-											<p><?php echo $productData[$i]->PRODUCT_NM_TH?></p>
-											<a href="product-details.html" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>สั่งซื้อ</a></div>												
+													<img src=<?php echo base_url();?>images/<?php echo $product->IMAGE_NAME?> alt="" />
+													<h2><?php echo $product->PRICE?></h2>
+													<p><?php echo $product->PRODUCT_NM_TH?></p>
+													<a href="product-details.html" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
+													<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>สั่งซื้อ</a>
+												</div>												
 											</div>
 										</div>
 									</div>
-									<?php if ($i == 2) { ?>
-								</div>
-									<?php } ?>
-									<?php } ?>
-									<?php if ($i >= 3 && $i <= 5) { ?>
-									<?php if ($i == 3) { ?>
-								<div class="item">
-									<?php } ?>
-									<div class="col-sm-4">
-										<div class="product-image-wrapper">
-											<div class="single-products">
-												<div class="productinfo text-center">
-													<img src=<?php echo base_url();?>images/<?php echo $productData[$i]->IMAGE_NAME?> alt="" />
-											<h2><?php echo $productData[$i]->PRICE?></h2>
-											<p><?php echo $productData[$i]->PRODUCT_NM_TH?></p>	
-											<a href="product-details.html" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>สั่งซื้อ</a></div>
-											</div>
-										</div>
-									</div>
-									<?php if ($i == 5) { ?>
-								</div>
-									<?php } ?>
-									<?php } ?>					
-									<?php } ?>	
+								<?php endforeach ?>
+								<?php echo '</div>' ?>
 							</div>
-							 <a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
+							<a class="left recommended-item-control" href="#recommended-item-carousel" data-slide="prev">
 								<i class="fa fa-angle-left"></i>
-							  </a>
-							  <a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
+								</a>
+								<a class="right recommended-item-control" href="#recommended-item-carousel" data-slide="next">
 								<i class="fa fa-angle-right"></i>
-							  </a>			
+							</a>			
 						</div>
-					</div><!--/recommended_items-->
+					</div>
+					<!--/recommended_items-->
 					
 				</div>
 			</div>
