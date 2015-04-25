@@ -1,5 +1,3 @@
-<?php $this->load->view('template/header');?>
-
 	<!--slider-->
 	<section id="slider">
 		<div class="container">
@@ -143,6 +141,3 @@
 			</div>
 		</div>
 	</section>
-	
-
-<?php $this->load->view('template/footer');?>
