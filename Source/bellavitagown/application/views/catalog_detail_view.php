@@ -1,7 +1,3 @@
-<?php $this->load->view('template/header');?>
-
-
-	
 	<section>
 		<div class="container">
 			<div class="row">
@@ -515,6 +511,3 @@
 			</div>
 		</div>
 	</section>
-	
-
-<?php $this->load->view('template/footer');?>
