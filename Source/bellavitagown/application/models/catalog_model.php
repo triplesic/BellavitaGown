@@ -22,7 +22,7 @@ Class Catalog_Model extends CI_Model
 	function getAll()
 	{
 		$query = $this->db->get('catalog');
-		return $query->result_array();
+		return $query->result();
 	}
 }
 ?>

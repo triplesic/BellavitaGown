@@ -66,7 +66,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-sm-3">
-					<?php $this->load->view('template/left_category');?>
+					<?php $this->load->view('template/left_category', $catalogData);?>
 				</div>
 				
 				<div class="col-sm-9 padding-right">

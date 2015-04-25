@@ -32,8 +32,9 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> +2 95 01 88 821</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> info@domain.com</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> (+66)2 416 0314</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> (+66)2 859 0013 4</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> pearl@bellavitagown.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -59,38 +60,10 @@
 						<div class="logo pull-left">
 							<a href=""><img src="<?php echo base_url();?>images/home/logo.png" alt="" /></a>
 						</div>
-						
-<!-- 						<div class="btn-group pull-right"> -->
-<!-- 							<div class="btn-group"> -->
-<!-- 								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown"> -->
-<!-- 									USA -->
-<!-- 									<span class="caret"></span> -->
-<!-- 								</button> -->
-<!-- 								<ul class="dropdown-menu"> -->
-<!-- 									<li><a href="#">Canada</a></li> -->
-<!-- 									<li><a href="#">UK</a></li> -->
-<!-- 								</ul> -->
-<!-- 							</div> -->
-							
-<!-- 							<div class="btn-group"> -->
-<!-- 								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown"> -->
-<!-- 									DOLLAR -->
-<!-- 									<span class="caret"></span> -->
-<!-- 								</button> -->
-<!-- 								<ul class="dropdown-menu"> -->
-<!-- 									<li><a href="#">Canadian Dollar</a></li> -->
-<!-- 									<li><a href="#">Pound</a></li> -->
-<!-- 								</ul> -->
-<!-- 							</div> -->
-<!-- 						</div> -->
 					</div>
 					<div class="col-sm-8">
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
-<!-- 								<li><a href="#"><i class="fa fa-user"></i> Account</a></li> -->
-<!-- 								<li><a href="#"><i class="fa fa-star"></i> Wishlist</a></li> -->
-<!-- 								<li><a href="checkout.html"><i class="fa fa-crosshairs"></i> Checkout</a></li> -->
-<!-- 								<li><a href="cart.html"><i class="fa fa-shopping-cart"></i> Cart</a></li> -->
 								<li>
 								<?php  if($userType == NULL){?>
 								<li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
@@ -124,41 +97,28 @@
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li>
 								<?php echo anchor('home', 'Home');?>
-<!-- 								<a href="index.html" class="active">Home</a> -->
 								</li>
-<!-- 								<li><a href="shop.html">Catalogue</a></li> -->
-								<li class="dropdown"><a href="#">Catalogue<i class="fa fa-angle-down"></i></a>
-                                    <ul role="menu" class="sub-menu">
-                                        <li><a href="<?php echo base_url();?>catalog/detail/json?cID=1">เสื้อกาวน์</a></li>
-										<li><a href="<?php echo base_url();?>catalog/detail/json?cID=2">เสื้อผ่าตัดใหญ่</a></li> 
-<!-- 										<li><a href="#">Type 3</a></li>  -->
-<!-- 										<li><a href="#">other</a></li>  -->
+								<li class="dropdown"><a href="shop.html">Catalog<i class="fa fa-angle-down"></i></a>
+                                    <ul role="menu" class="sub-menu">                          	
+                                    	<?php foreach ($catalogData as $catalog): ?>
+                                    	<li>
+                                    		<a href="<?php echo base_url()."catalog/detail/json?cID=".$catalog->CATALOG_ID;?>">
+                                    			<?php echo $catalog->CATALOG_NAME?>
+                                    		</a>
+                                    	</li>
+										<?php endforeach ?>	
                                     </ul>
                                 </li> 
 							<?php if($userType == "admin"){?>
-                                <li><a href="#">Order</a></li>
-                                <li><a href="c#">Receive Order</a></li>
+                                <li><a href="contact-us.html">Order</a></li>
+                                <li><a href="contact-us.html">Receive Order</a></li>
                             <?php }else if($userType == "user") {?>
                             	<li><a href="contact-us.html">Order</a></li>
                             <?php }?>
-<!-- 								<li class="dropdown"><a href="#">Blog<i class="fa fa-angle-down"></i></a> -->
-<!--                                     <ul role="menu" class="sub-menu"> -->
-<!--                                         <li><a href="blog.html">Blog List</a></li> -->
-<!-- 										<li><a href="blog-single.html">Blog Single</a></li> -->
-<!--                                     </ul> -->
-<!--                                 </li>  -->
-<!-- 								<li><a href="404.html">404</a></li> -->
-								<li>
-								<?php echo anchor('contact', 'Contact');?>
-								</li>
+								<li><a href="contact-us.html">Contact</a></li>
 							</ul>
 						</div>
 					</div>
-<!-- 					<div class="col-sm-3"> -->
-<!-- 						<div class="search_box pull-right"> -->
-<!-- 							<input type="text" placeholder="Search"/> -->
-<!-- 						</div> -->
-<!-- 					</div> -->
 				</div>
 			</div>
 		</div><!--/header-bottom-->
