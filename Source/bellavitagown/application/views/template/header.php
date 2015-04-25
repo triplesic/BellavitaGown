@@ -98,7 +98,7 @@
 								<li>
 								<?php echo anchor('home', 'Home');?>
 								</li>
-								<li class="dropdown"><a href="shop.html">Catalog<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="#">Catalog<i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">                          	
                                     	<?php foreach ($catalogData as $catalog): ?>
                                     	<li>

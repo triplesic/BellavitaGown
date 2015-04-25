@@ -1,6 +1,3 @@
-<?php $this->load->view('template/header');?>
-
-
 	<section id="form"><!--form-->
 		<div class="container">
 			<div class="row">
@@ -39,7 +36,3 @@
 			</div>
 		</div>
 	</section><!--/form-->
-	
-	
-
-<?php $this->load->view('template/footer');?>
