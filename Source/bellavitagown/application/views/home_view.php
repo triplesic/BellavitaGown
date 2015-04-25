@@ -1,4 +1,3 @@
-<div/>
 <!--slider-->
 	<section id="slider">
 		<div class="container">
