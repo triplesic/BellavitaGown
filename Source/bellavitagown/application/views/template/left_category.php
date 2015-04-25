@@ -24,10 +24,11 @@
 						</ul>
 					</div>
 				</div>
+				-->
 			</div>
--->
 		<?php endforeach ?>	
 		<div class="shipping text-center"><!--shipping-->
-		<img src="<?php echo base_url();?>images/home/shipping.jpg" alt="" />
-	</div><!--/shipping-->				
+			<img src="<?php echo base_url();?>images/home/shipping.jpg" alt="" />
+		</div><!--/shipping-->	
+	</div>			
 </div>
