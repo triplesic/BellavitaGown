@@ -1,4 +1,5 @@
-	<!--slider-->
+<div/>
+<!--slider-->
 	<section id="slider">
 		<div class="container">
 			<div class="row">
