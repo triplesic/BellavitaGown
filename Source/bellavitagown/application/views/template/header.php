@@ -115,7 +115,7 @@
                             <?php }else if($userType == "user") {?>
                             	<li><a href="contact-us.html">Order</a></li>
                             <?php }?>
-								<li><a href="contact-us.html">Contact</a></li>
+								<li><a href="<?php echo base_url()?>contact">Contact</a></li>
 							</ul>
 						</div>
 					</div>

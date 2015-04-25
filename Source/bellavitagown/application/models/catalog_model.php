@@ -12,6 +12,7 @@ Class Catalog_Model extends CI_Model
 		$this -> db -> join('product AS p' , 'p.CATALOG_ID = c.CATALOG_ID');
 		$this -> db -> join('Product_dtl AS pd' , 'pd.PRODUCT_ID = p.PRODUCT_ID');
 		$this -> db -> where('c.CATALOG_ID = ' . "'" . $catalog_ID . "'");	
+		$this->db->group_by('pd.PRODUCT_ID');
 		$this->db->order_by('pd.PRODUCT_ID', 'desc');
 		$query = $this -> db -> get();
 	

@@ -1,5 +1,3 @@
-<?php $this->load->view('template/header');?>
-
 <div id="contact-page" class="container">
     	<div class="bg">
 	    	<div class="row">    		
@@ -67,5 +65,3 @@
 	    	</div>  
     	</div>	
     </div><!--/#contact-page-->
-    
-    <?php $this->load->view('template/footer');?>
