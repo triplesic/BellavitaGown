@@ -66,11 +66,11 @@
 							<ul class="nav navbar-nav">
 								<li>
 								<?php  if($userType == NULL){?>
-								<li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><?php echo anchor('login', '<i class="fa fa-lock"></i>Login');?></li>
 						<?php }else { ?>
 								<li><a href="#"><i class="fa fa-user"></i><?php echo $firstName; ?> <?php echo $lastName; ?></a></li>
-								<li><a href="#"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> Cart</a></li>
 								<li><?php echo anchor('login/logout', '<i class="fa fa-lock"></i>Logout');?></li>
 							<?php }?>	
 								</li>
