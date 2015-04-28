@@ -23,8 +23,8 @@
 											<img src=<?php echo base_url();?>images/<?php echo $catalogDetail[$i]->IMAGE_NAME?> alt="" />
 											<h2><?php echo $catalogDetail[$i]->PRICE?></h2>
 											<p><?php echo $catalogDetail[$i]->PRODUCT_NM_TH?></p>
-											<a href="product/detail/json?pID=<?php echo $catalogDetail[$i]->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
-											<a href="#" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>สั่งซื้อ</a>
+											<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $catalogDetail[$i]->PRODUCT_DTL_ID?>&pID=<?php echo $catalogDetail[$i]->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
+											
 											
 										</div>
 <!-- 										<div class="product-overlay"> -->
