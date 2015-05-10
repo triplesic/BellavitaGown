@@ -1,6 +1,6 @@
 	<script
 	type="text/javascript"
-	src="<?php echo base_url();?>js/departmentmanage.js"></script>
+	src="<?php echo base_url();?>js/order.js"></script>
 	<section>
 		<div class="container">
 			<div class="row">
@@ -15,7 +15,8 @@
 							<div class="view-product">
 
 								<img src="<?php echo base_url();?>images/<?php echo $productDetail[0]->IMAGE_NAME?>" alt="" />
-<!-- 								<h3>ZOOM</h3> -->
+								<input type="hidden" id="productImage" name="productImage" value="<?php echo $productDetail[0]->IMAGE_NAME?>"/>
+	<!-- 							<h3>ZOOM</h3> -->
 							</div>
 							
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
@@ -114,22 +115,34 @@
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
 								<img src="<?php echo base_url();?>images/product-details/new.jpg" class="newarrival" alt="" />
-								<h2><?php echo $productDetail[0]->PRODUCT_NM_TH?></h2>
-								<p>Code : <?php echo $productDetail[0]->PRODUCT_DTL_ID?></p>
+								<h2><?php echo $productDetail[0]->PRODUCT_NM_TH?>
+								<input type="hidden" id="productName" name="productName" value="<?php echo $productDetail[0]->PRODUCT_NM_TH?>"/>
+								</h2>
+								<p>Code : <?php echo $productDetail[0]->PRODUCT_DTL_ID?>
+								<input type="hidden" id="pddID" name="pddID" value="<?php echo $productDetail[0]->PRODUCT_DTL_ID?>"/>
+								</p>
 <!-- 								<img src="images/product-details/rating.png" alt="" /> -->
 								<span>
-									<span><?php echo $productDetail[0]->PRICE?>. บาท</span>	
+									<span><?php echo $productDetail[0]->PRICE?>. บาท
+									<input type="hidden" id="price" name="price" value="<?php echo $productDetail[0]->PRICE?>"/>
+									</span>	
 								</span>
 								
 								<p><b>Availability:</b> In Stock</p>
 								<p><b>Condition:</b> New</p>
 								<p><b>Brand:</b> Bella Vita Gown</p>
 								<p><b>Detail :</b> <?php echo $productDetail[0]->DETAIL?></p>
-								
-								<p><button type="button" class="btn btn-fefault cart">
+								<p><b>จำนวนที่สั่ง :</b> <input type="text" placeholder="0" id="amountOrder" name="amountOrder"/></p>
+								<p><button type="button" onclick="addOrder();"class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
 										Add to cart
-									</button></p>
+									</button>
+									
+									<button type="button" onclick="destroyCart();"class="btn btn-fefault cart">
+										<i class="fa fa-shopping-cart"></i>
+										Destroy
+									</button>
+									</p>
 <!-- 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a> -->
 							</div>
 						</div>
