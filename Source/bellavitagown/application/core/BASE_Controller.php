@@ -19,6 +19,9 @@ class BASE_Controller extends CI_Controller {
 		
 		$data['catalogData'] = $this->catalog_model->getAll();
 		
+		$cartConten =  $this->cart->contents();
+		$data['cartAmount'] = count($cartConten);
+		
     	$this->load->view('template/header', $data);
     	$this->load->view($view, $data);
     	$this->load->view('template/footer');
