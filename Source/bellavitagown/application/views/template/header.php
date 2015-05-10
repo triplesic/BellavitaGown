@@ -13,6 +13,13 @@
     <link href="<?php echo base_url();?>css/animate.css" rel="stylesheet">
 	<link href="<?php echo base_url();?>css/main.css" rel="stylesheet">
 	<link href="<?php echo base_url();?>css/responsive.css" rel="stylesheet">
+	
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery/jquery-1.7.2.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>js/jquery/jquery.validate.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>js/jquery/jquery-ui.min.js"></script>
+<script type="text/javascript" src="<?php echo base_url();?>js/jquery/jquery.blockUI.js"></script>
+	
+	
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -66,11 +73,15 @@
 							<ul class="nav navbar-nav">
 								<li>
 								<?php  if($userType == NULL){?>
-								<li><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								
+								
+								<li id="showCart"><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> Cart (<?php echo $cartAmount; ?>)</a></li>
+								
+								
 								<li><?php echo anchor('login', '<i class="fa fa-lock"></i>Login');?></li>
 						<?php }else { ?>
 								<li><a href="#"><i class="fa fa-user"></i><?php echo $firstName; ?> <?php echo $lastName; ?></a></li>
-								<li><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> Cart</a></li>
+								<li><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> Cart (<?php echo $cartAmount; ?>)</a></li>
 								<li><?php echo anchor('login/logout', '<i class="fa fa-lock"></i>Logout');?></li>
 							<?php }?>	
 								</li>
