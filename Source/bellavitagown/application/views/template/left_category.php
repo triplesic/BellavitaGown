@@ -1,5 +1,5 @@
 <div class="left-sidebar">
-	<h2>Category</h2>
+	<h2><?php echo lang('category', '')?></h2>
 	<div class="panel-group category-products" id="accordian"><!--category-productsr-->
 		<?php foreach ($catalogData as $catalog): ?>
         	<div class="panel panel-default">
@@ -30,7 +30,7 @@
 		<div class="shipping text-center" style="padding-bottom: 10px;">
 			<script type="text/javascript" src="http://counter7.freecounterstat.com/private/counter.js?c=f33488f7ea9155e0e1239ced20fdb826"></script>
 			<br/>
-			<a target="_Blank" title="visitors">visitors</a>
+			<a target="_Blank" title="visitors"><?php echo lang('visitors', '')?></a>
 			<!-- <img src="<?php echo base_url();?>images/home/shipping.jpg" alt="" /> -->
 		</div>
 	</div>			

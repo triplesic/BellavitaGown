@@ -39,9 +39,9 @@
 					<div class="col-sm-6">
 						<div class="contactinfo">
 							<ul class="nav nav-pills">
-								<li><a href="#"><i class="fa fa-phone"></i> (+66)2 416 0314</a></li>
-								<li><a href="#"><i class="fa fa-phone"></i> (+66)2 859 0013 4</a></li>
-								<li><a href="#"><i class="fa fa-envelope"></i> pearl@bellavitagown.com</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> (66)2-416-0314</a></li>
+								<li><a href="#"><i class="fa fa-phone"></i> (66)2-895-0013-4</a></li>
+								<li><a href="#"><i class="fa fa-envelope"></i> bellavita_gown@hotmail.com</a></li>
 							</ul>
 						</div>
 					</div>
@@ -65,7 +65,19 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href=""><img src="<?php echo base_url();?>images/home/logo.png" alt="" /></a>
+							<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/home/logo.png" alt="" /></a>
+						</div>
+						<div class="btn-group pull-right" style="margin-top: 1.3em;">
+							<div class="btn-group">
+								<button type="button" class="btn btn-default dropdown-toggle usa" data-toggle="dropdown">
+									TH / EN
+									<span class="caret"></span>
+								</button>
+								<ul class="dropdown-menu">
+									<li><a onclick="javascript:document.cookie='lang=thai'" href="">ภาษาไทย</a></li>
+									<li><a onclick="javascript:document.cookie='lang=eng'" href="">English</a></li>
+								</ul>
+							</div>
 						</div>
 					</div>
 					<div class="col-sm-8">
@@ -75,14 +87,14 @@
 								<?php  if($userType == NULL){?>
 								
 								
-								<li id="showCart"><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> Cart (<?php echo $cartAmount; ?>)</a></li>
+								<li id="showCart"><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> <?php echo lang('cart');?> (<?php echo $cartAmount; ?>)</a></li>
 								
 								
-								<li><?php echo anchor('login', '<i class="fa fa-lock"></i>Login');?></li>
+								<li><?php echo anchor('login', '<i class="fa fa-lock"></i>'.lang('login'));?></li>
 						<?php }else { ?>
 								<li><a href="#"><i class="fa fa-user"></i><?php echo $firstName; ?> <?php echo $lastName; ?></a></li>
 								<li><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> Cart (<?php echo $cartAmount; ?>)</a></li>
-								<li><?php echo anchor('login/logout', '<i class="fa fa-lock"></i>Logout');?></li>
+								<li><?php echo anchor('login/logout', '<i class="fa fa-lock"></i>'.lang('logout'));?></li>
 							<?php }?>	
 								</li>
 							</ul>
@@ -107,9 +119,9 @@
 						<div class="mainmenu pull-left">
 							<ul class="nav navbar-nav collapse navbar-collapse">
 								<li>
-								<?php echo anchor('home', 'Home');?>
+								<?php echo anchor('home', lang('home'));?>
 								</li>
-								<li class="dropdown"><a href="#">Catalog<i class="fa fa-angle-down"></i></a>
+								<li class="dropdown"><a href="#"><?php echo lang('catalog')?><i class="fa fa-angle-down"></i></a>
                                     <ul role="menu" class="sub-menu">                          	
                                     	<?php foreach ($catalogData as $catalog): ?>
                                     	<li>
@@ -126,7 +138,7 @@
                             <?php }else if($userType == "user") {?>
                             	<li><a href="contact-us.html">Order</a></li>
                             <?php }?>
-								<li><a href="<?php echo base_url()?>contact">Contact</a></li>
+								<li><a href="<?php echo base_url()?>contact"><?php echo lang('contact')?></a></li>
 							</ul>
 						</div>
 					</div>
