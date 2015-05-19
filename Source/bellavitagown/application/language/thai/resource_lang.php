@@ -27,3 +27,4 @@ $lang['or']="หรือ";
 $lang['new_user_signup']="สมัครสมาชิกใหม่";
 $lang['password']="รหัสผ่าน";
 $lang['signup']="สมัคร";
+?>

@@ -1,6 +1,9 @@
 	<script
+	
 	type="text/javascript"
-	src="<?php echo base_url();?>js/order.js"></script>
+	src="<?php echo base_url();?>js/order.js">
+
+	</script>
 	<section>
 		<div class="container">
 			<div class="row">
@@ -84,7 +87,7 @@
 									if($i > 3)
 									{
 									?>
-										  <a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $productList[$i-1]->PRODUCT_DTL_ID?>&pID=<?php echo $productList[$i-1]->PRODUCT_ID?>"><img src="<?php echo base_url();?>images/<?php echo $productList[$i-1]->IMAGE_NAME?>" alt="" style="width: 25%; height: 25%;"></a>
+										  <a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $productList[$i-1]->PRODUCT_DTL_ID?>&pID=<?php echo $productList[$i-1]->PRODUCT_ID?>&clrID=<?php echo $productList[$i-1]->COLOR_ID?>"><img src="<?php echo base_url();?>images/<?php echo $productList[$i-1]->IMAGE_NAME?>" alt="" style="width: 25%; height: 25%;"></a>
 
 									<?php }?>
 									
@@ -132,8 +135,21 @@
 								<p><b>Condition:</b> New</p>
 								<p><b>Brand:</b> Bella Vita Gown</p>
 								<p><b>Detail :</b> <?php echo $productDetail[0]->DETAIL?></p>
+								<p><b>Color :</b><?php echo $productDetail[0]->COLOR?>
+								<input type="hidden" id="color" name="color" value="<?php echo $productDetail[0]->COLOR?>"/>
+								</p>
+								<p><b>Size :</b> 
+								
+								<select name="size" id="size"  style="width: 25%;">
+   								<?php foreach($sizeList as $size){ ?>
+        							<option value="<?php echo $size->SIZE_ID?>"><?php echo $size->SIZE_NM?></option>';
+    							<?php } ?>
+								</select>
+								
+								
+								 </p>
 								<p><b>จำนวนที่สั่ง :</b> <input type="text" placeholder="0" id="amountOrder" name="amountOrder"/></p>
-								<p><button type="button" onclick="addOrder();"class="btn btn-fefault cart">
+								<p><button type="button" onclick="addCart();"class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
 										Add to cart
 									</button>

@@ -25,7 +25,7 @@ class Login extends BASE_Controller {
 			$data['firstName'] = $session_data['firstName'];
 			$data['lastName'] = $session_data['lastName'];
 			
-			$this->render_page( 'login_view',$data );
+			$this->render_page('login_view',$data );
 		} else {
 			// Go to private area
 			// redirect('home', 'refresh');

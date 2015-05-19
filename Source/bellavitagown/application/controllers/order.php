@@ -6,7 +6,8 @@ class Order extends BASE_Controller {
 	{
 		parent::__construct();
 		$this->load->model('products_model','',TRUE);
-		
+		$this->load->model('size_model','',TRUE);
+		$this->load->model('order_model','',TRUE);
 	}
 
 	public function index()
@@ -15,7 +16,7 @@ class Order extends BASE_Controller {
 		$this->render_page('order_view', $data);
 	}
 	
-	public function addOrder()
+	public function addCart()
 	{
 	
 		$qty = $this->input->post('qty');
@@ -23,9 +24,9 @@ class Order extends BASE_Controller {
 		$name = $this->input->post('name');
 		$image = $this->input->post('image');
 		$price = $this->input->post('price');
-		
-		$size = "L";
-		$color = "red";
+		$sizeID = $this->input->post('sizeID');
+		$color = $this->input->post('color');
+		$size = $this->input->post('size');
 		
 		$dataCart = array(
 				'id'      => $id,
@@ -34,11 +35,13 @@ class Order extends BASE_Controller {
 				'total'	 => $qty*$price,	
 				'name'    => $name,
 				'image'   => $image,
-				'options' => array('Size' => $size, 'Color' => $color)
+				'sizeID'  => $sizeID,
+				'size'   => $size,
+				'color'	  => $color,
+				'sizeList' => $this->size_model->getProductSize($id)
 		);
 
-		$this->cart->insert($dataCart);
-		
+		$this->cart->insert($dataCart);		
 		$cartTotal =  $this->cart->total();
 		$cartItem = $this->cart->total_items();
 		$cartConten =  $this->cart->contents();
@@ -47,6 +50,68 @@ class Order extends BASE_Controller {
 		
 		echo json_encode(array('status' => $status, 'cartTotal' => $cartTotal,'cartItem' => $cartItem ,'conten' => $cartConten,'cartAmount' => $cartAmount));
 	}
+	
+	public function deleteCart()
+	{
+	
+		$rowID = $this->input->post('rowID');
+		$data = array(
+				'rowid' => $rowID,
+				'qty' => 0
+		);
+		// Update cart data, after cancel.
+		$this->cart->update($data);
+		$status = true;
+		echo json_encode(array('status' => $status));
+	}
+	
+	
+	
+	
+	public function confirmOrder()
+	{
+		
+		$session_data = $this->session->userdata('logged_in');
+		$userId = $session_data['userId'];
+
+		do{
+			$key = substr(md5(microtime().rand()),0,10);	
+			$data = array(
+					'ORDER_PRICE_TOTAL' => $this->cart->total(),
+					'USER_ID' => $userId,
+					'ORDER_GNR_NUMBER' => $key
+			);			
+		}while(!$this->order_model->insertOrder($data));
+		
+		foreach ($this->cart->contents() as $item)
+		{
+			$cartItem = array(
+					'PRODUCT_DTL_ID' => $item['id'],
+					'SIZE_ID' => $item['sizeID'],
+					'QUANTITY' => $item['qty'],
+					'TOTAL' => $item['total'],
+					'PRICE' => $item['price'],
+					'ORDER_GRN_NUMBER' => $key
+
+			);
+			
+			$this->order_model->insertOrderDTL($cartItem);
+		}
+		$this->cart->destroy();
+		$status = true;
+		echo json_encode(array('status' => $status, 'message' => "สั่งซื้อเรียบร้อย"));
+		
+	}
+	
+	public function confirm()
+	{
+		$session_data = $this->session->userdata('logged_in');
+		$userId = $session_data['userId'];
+		
+		$data['orderList'] = $this->order_model->getOrder($userId);
+		$this->render_page('order_confirm_view', $data);
+	}
+	
 	
 	public function destroy()
 	{

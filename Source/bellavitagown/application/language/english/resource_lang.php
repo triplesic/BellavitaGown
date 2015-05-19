@@ -27,3 +27,4 @@ $lang['or']="OR";
 $lang['new_user_signup']="New User Signup";
 $lang['password']="PASSWOORD";
 $lang['signup']="SIGN UP";
+?>
