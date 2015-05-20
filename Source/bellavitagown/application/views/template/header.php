@@ -74,8 +74,8 @@
 									<span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
-									<li><a onclick="javascript:document.cookie='lang=thai; path=/;domain='"<?php echo base_url();?> href="">ภาษาไทย</a></li>
-									<li><a onclick="javascript:document.cookie='lang=eng; path=/;domain='"<?php echo base_url();?> href="">English</a></li>
+									<li><a onclick="javascript:document.cookie='lang=thai'" href="">ภาษาไทย</a></li>
+									<li><a onclick="javascript:document.cookie='lang=eng'" href="">English</a></li>
 								</ul>
 							</div>
 						</div>

@@ -118,27 +118,27 @@
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
 								<img src="<?php echo base_url();?>images/product-details/new.jpg" class="newarrival" alt="" />
-								<h2><?php echo $productDetail[0]->PRODUCT_NM?>
-								<input type="hidden" id="productName" name="productName" value="<?php echo $productDetail[0]->PRODUCT_NM?>"/>
+								<h2><?php echo $productDetail[0]->PRODUCT_NM_TH?>
+								<input type="hidden" id="productName" name="productName" value="<?php echo $productDetail[0]->PRODUCT_NM_TH?>"/>
 								</h2>
-								<p><?php echo lang('code')?> : <?php echo $productDetail[0]->PRODUCT_DTL_ID?>
+								<p>Code : <?php echo $productDetail[0]->PRODUCT_DTL_ID?>
 								<input type="hidden" id="pddID" name="pddID" value="<?php echo $productDetail[0]->PRODUCT_DTL_ID?>"/>
 								</p>
 <!-- 								<img src="images/product-details/rating.png" alt="" /> -->
 								<span>
-									<span><?php echo $productDetail[0]->PRICE?>. <?php echo lang('baht')?>
+									<span><?php echo $productDetail[0]->PRICE?>. บาท
 									<input type="hidden" id="price" name="price" value="<?php echo $productDetail[0]->PRICE?>"/>
 									</span>	
 								</span>
 								
-								<p><b><?php echo lang('product')?></b> In Stock</p>
-								<p><b><?php echo lang('condition')?>:</b> New</p>
-								<p><b><?php echo lang('brand')?></b> Bella Vita Gown</p>
-								<p><b><?php echo lang('detail')?> :</b> <?php echo $productDetail[0]->DETAIL?></p>
-								<p><b><?php echo lang('color')?> :</b><?php echo $productDetail[0]->COLOR?>
+								<p><b>Availability:</b> In Stock</p>
+								<p><b>Condition:</b> New</p>
+								<p><b>Brand:</b> Bella Vita Gown</p>
+								<p><b>Detail :</b> <?php echo $productDetail[0]->DETAIL?></p>
+								<p><b>Color :</b><?php echo $productDetail[0]->COLOR?>
 								<input type="hidden" id="color" name="color" value="<?php echo $productDetail[0]->COLOR?>"/>
 								</p>
-								<p><b><?php echo lang('size')?> :</b> 
+								<p><b>Size :</b> 
 								
 								<select name="size" id="size"  style="width: 25%;">
    								<?php foreach($sizeList as $size){ ?>
@@ -148,10 +148,10 @@
 								
 								
 								 </p>
-								<p><b><?php echo lang('order_amount')?> :</b> <input type="text" placeholder="0" id="amountOrder" name="amountOrder"/></p>
+								<p><b>จำนวนที่สั่ง :</b> <input type="text" placeholder="0" id="amountOrder" name="amountOrder"/></p>
 								<p><button type="button" onclick="addCart();"class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
-										<?php echo lang('add_to_cart')?>
+										Add to cart
 									</button>
 									
 									<button type="button" onclick="destroyCart();"class="btn btn-fefault cart">

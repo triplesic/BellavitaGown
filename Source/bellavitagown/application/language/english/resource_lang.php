@@ -27,17 +27,4 @@ $lang['or']="OR";
 $lang['new_user_signup']="New User Signup";
 $lang['password']="PASSWOORD";
 $lang['signup']="SIGN UP";
-$lang['code']="CODE";
-$lang['product']="PRODUCT";
-$lang['condition']="CONDITION";
-$lang['brand']="BRAND";
-$lang['detail']="DETAIL";
-$lang['color']="COLOR";
-$lang['size']="SIZE";
-$lang['order_amount']="Order amount";
-$lang['add_to_cart']="ADD TO CART";
-$lang['baht']="Baht";
-$lang['new_arrival']="NEW ARRIVALS";
-$lang['top_recommend']="TOP RECOMMENDED";
-$lang['see_detail']="Detail";
 ?>

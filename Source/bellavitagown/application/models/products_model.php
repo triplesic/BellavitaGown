@@ -1,19 +1,9 @@
 <?php
 Class Products_Model extends CI_Model
 {
- function getNewProduct($lang)
+ function getNewProduct()
  {
- 	$sqlStr = '';
- 	if($lang == "english")
- 	{
- 		$sqlStr = 'p.PRODUCT_ID,p.PRODUCT_NM_EN PRODUCT_NM,p.PRICE,pd.PRODUCT_DTL_ID,pd.IMAGE_NAME';
- 	}
- 	else
- 	{
- 		$sqlStr = 'p.PRODUCT_ID,p.PRODUCT_NM_TH PRODUCT_NM,p.PRICE,pd.PRODUCT_DTL_ID,pd.IMAGE_NAME';
- 	}
- 	
-   $this -> db -> select($sqlStr);
+   $this -> db -> select('p.PRODUCT_ID,p.PRODUCT_NM_TH,p.PRODUCT_NM_EN,p.PRICE,pd.PRODUCT_DTL_ID,pd.IMAGE_NAME');
    $this -> db -> from('product AS p');
    $this -> db -> join('product_dtl AS pd' , 'p.PRODUCT_ID = pd.PRODUCT_ID', 'left');
    $this->db->group_by('pd.PRODUCT_ID');
@@ -43,19 +33,9 @@ Class Products_Model extends CI_Model
  
  }
  
- function getProductDetail($product_DTL_ID, $lang)
+ function getProductDetail($product_DTL_ID)
  {
- 		$sqlStr = '';
-		if($lang == "english")
-		{
-			$sqlStr = 'p.PRODUCT_ID,p.PRODUCT_NM_EN PRODUCT_NM,p.PRICE,pd.PRODUCT_DTL_ID,pd.IMAGE_NAME,pd.DETAIL_EN DETAIL,pd.COLOR,pd.SIZE,s.QUANTITY';
-		}
-		else
-		{
-			$sqlStr = 'p.PRODUCT_ID,p.PRODUCT_NM_TH PRODUCT_NM,p.PRICE,pd.PRODUCT_DTL_ID,pd.IMAGE_NAME,pd.DETAIL DETAIL,pd.COLOR,pd.SIZE,s.QUANTITY';
-		}
-
- 	$this -> db -> select($sqlStr);
+ 	$this -> db -> select('p.PRODUCT_ID,p.PRODUCT_NM_TH,p.PRODUCT_NM_EN,p.PRICE,pd.PRODUCT_DTL_ID,pd.IMAGE_NAME,pd.DETAIL,pd.COLOR,pd.SIZE,s.QUANTITY');
  	$this -> db -> from('product_dtl AS pd');
  	$this -> db -> join('product AS p' , 'p.PRODUCT_ID = pd.PRODUCT_ID', 'left');
  	$this -> db -> join('stock AS s' , 's.PRODUCT_DTL_ID = pd.PRODUCT_DTL_ID', 'left');
