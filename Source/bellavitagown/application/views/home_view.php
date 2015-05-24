@@ -73,7 +73,7 @@
 					
 					<!--features_items-->
 					<div class="features_items">
-						<h2 class="title text-center">New Arrivals :: สินค้ามาใหม่</h2>
+						<h2 class="title text-center"><?php echo lang('new_arrival')?></h2>
 					<?php foreach ($productData as $product): ?>
 						<div class="col-sm-4">
 							<div class="product-image-wrapper">
@@ -81,8 +81,8 @@
 									<div class="productinfo text-center">
 										<img src=<?php echo base_url();?>images/<?php echo $product->IMAGE_NAME?> alt="" />
 										<h2><?php echo $product->PRICE?></h2>
-										<p><?php echo $product->PRODUCT_NM_TH?></p>
-										<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $product->PRODUCT_DTL_ID?>&pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
+										<p><?php echo $product->PRODUCT_NM?></p>
+										<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $product->PRODUCT_DTL_ID?>&pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><?php echo lang('see_detail')?></a>
 										
 									</div>
 								</div>
@@ -94,7 +94,7 @@
 					
 					<!--recommended_items-->
 					<div class="recommended_items">
-						<h2 class="title text-center">Top Recommended :: สินค้าแนะนำ</h2>
+						<h2 class="title text-center"><?php echo lang('top_recommend')?></h2>
 						
 						<div id="recommended-item-carousel" class="carousel slide" data-ride="carousel">
 							<div class="carousel-inner">
@@ -117,8 +117,8 @@
 												<div class="productinfo text-center">
 													<img src=<?php echo base_url();?>images/<?php echo $product->IMAGE_NAME?> alt="" />
 													<h2><?php echo $product->PRICE?></h2>
-													<p><?php echo $product->PRODUCT_NM_TH?></p>
-													<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $product->PRODUCT_DTL_ID?>&pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
+													<p><?php echo $product->PRODUCT_NM?></p>
+													<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $product->PRODUCT_DTL_ID?>&pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><?php echo lang('see_detail')?></a>
 													
 												</div>												
 											</div>

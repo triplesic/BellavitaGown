@@ -27,4 +27,17 @@ $lang['or']="หรือ";
 $lang['new_user_signup']="สมัครสมาชิกใหม่";
 $lang['password']="รหัสผ่าน";
 $lang['signup']="สมัคร";
+$lang['code']="โค้ด";
+$lang['product']="สินค้า";
+$lang['condition']="สภาพ";
+$lang['brand']="แบรนด์";
+$lang['detail']="รายละเอียด";
+$lang['color']="สี";
+$lang['size']="ขนาด";
+$lang['order_amount']="จำนวนที่สั่ง";
+$lang['add_to_cart']="ใส่รถเข็น";
+$lang['baht']="Baht";
+$lang['new_arrival']="สินค้ามาใหม่";
+$lang['top_recommend']="สินค้าแนะนำ";
+$lang['see_detail']="ดูรายละเอียด";
 ?>
