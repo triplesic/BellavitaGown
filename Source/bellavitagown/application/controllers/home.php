@@ -11,8 +11,7 @@ class Home extends BASE_Controller {
 
 	public function index()
 	{
-
-		$data['productData'] = $this->products_model->getNewProduct($this->getLanguage());
+		$data['productData'] = $this->products_model->getNewProduct();
 		$data['popup'] = false;
 		$this->render_page('home_view',$data);
 	}

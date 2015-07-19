@@ -1,30 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+	<script src='https://www.google.com/recaptcha/api.js'></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     <title>Home | E-Shopper</title>
+    
     <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>css/font-awesome.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>css/prettyPhoto.css" rel="stylesheet">
     <link href="<?php echo base_url();?>css/price-range.css" rel="stylesheet">
     <link href="<?php echo base_url();?>css/animate.css" rel="stylesheet">
+	<link href="<?php echo base_url();?>css/responsive.css" rel="stylesheet">	
 	<link href="<?php echo base_url();?>css/main.css" rel="stylesheet">
-	<link href="<?php echo base_url();?>css/responsive.css" rel="stylesheet">
-	
-	<script type="text/javascript" src="<?php echo base_url();?>js/jquery/jquery-1.7.2.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>js/jquery/jquery.validate.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>js/jquery/jquery-ui.min.js"></script>
-<script type="text/javascript" src="<?php echo base_url();?>js/jquery/jquery.blockUI.js"></script>
-	
 	
     <!--[if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
-    <![endif]-->       
-    <link rel="shortcut icon" href="<?php echo base_url();?>images/ico/favicon.ico">
+    <![endif]--> 
+
+	
+  	<script src="<?php echo base_url();?>js/jquery/jquery-1.7.2.js"></script>
+	<script src="<?php echo base_url();?>js/lib/bootstrap.min.js"></script>
+	<script src="<?php echo base_url();?>js/lib/jquery.scrollUp.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.validate.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="<?php echo base_url();?>js/jquery.blockUI.js"></script>
+	<script src="<?php echo base_url();?>js/lib/price-range.js"></script>
+	<script src="<?php echo base_url();?>js/jquery.scrollUp.min.js"></script>
+    <script src="<?php echo base_url();?>js/lib/jquery.prettyPhoto.js"></script>
+    <script src="<?php echo base_url();?>js/lib/main.js"></script>
+	
+  	<link rel="shortcut icon" href="<?php echo base_url();?>images/ico/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="<?php echo base_url();?>images/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="<?php echo base_url();?>images/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="<?php echo base_url();?>images/ico/apple-touch-icon-72-precomposed.png">
@@ -32,6 +41,10 @@
 </head><!--/head-->
 
 <body>
+	<?php  if($popup == '1'){?>
+	
+	
+	<?php }else{?>
 	<header id="header"><!--header-->
 		<div class="header_top"><!--header_top-->
 			<div class="container">
@@ -74,8 +87,8 @@
 									<span class="caret"></span>
 								</button>
 								<ul class="dropdown-menu">
-									<li><a onclick="javascript:document.cookie='lang=thai; path=/;domain='"<?php echo base_url();?> href="">ภาษาไทย</a></li>
-									<li><a onclick="javascript:document.cookie='lang=eng; path=/;domain='"<?php echo base_url();?> href="">English</a></li>
+									<li><a onclick="javascript:document.cookie='lang=thai'" href="">ภาษาไทย</a></li>
+									<li><a onclick="javascript:document.cookie='lang=eng'" href="">English</a></li>
 								</ul>
 							</div>
 						</div>
@@ -84,7 +97,7 @@
 						<div class="shop-menu pull-right">
 							<ul class="nav navbar-nav">
 								<li>
-								<?php  if($userType == NULL){?>
+								<?php  if($userData['userType'] == NULL){?>
 								
 								
 								<li id="showCart"><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> <?php echo lang('cart');?> (<?php echo $cartAmount; ?>)</a></li>
@@ -92,7 +105,7 @@
 								
 								<li><?php echo anchor('login', '<i class="fa fa-lock"></i>'.lang('login'));?></li>
 						<?php }else { ?>
-								<li><a href="#"><i class="fa fa-user"></i><?php echo $firstName; ?> <?php echo $lastName; ?></a></li>
+								<li><a href="<?php echo base_url();?>users/info"><i class="fa fa-user"></i><?php echo $userData['firstName']; ?> <?php echo $userData['lastName']; ?></a></li>
 								<li><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> Cart (<?php echo $cartAmount; ?>)</a></li>
 								<li><?php echo anchor('login/logout', '<i class="fa fa-lock"></i>'.lang('logout'));?></li>
 							<?php }?>	
@@ -132,12 +145,13 @@
 										<?php endforeach ?>	
                                     </ul>
                                 </li> 
-							<?php if($userType == "admin"){?>
-                                <li><a href="contact-us.html">Order</a></li>
-                                <li><a href="contact-us.html">Receive Order</a></li>
-                            <?php }else if($userType == "user") {?>
+							<?php if($userData['userType'] == "admin"){?>
+                                <li><a href="<?php echo base_url()?>users/manage">จัดการผู้ใช้งาน</a></li>
+                                <li><a href="<?php echo base_url()?>product/manage">จัดการสินค้า</a></li>
+                            <?php }else if($userData['userType'] == "user") {?>
                             	<li><a href="contact-us.html">Order</a></li>
                             <?php }?>
+                            	<li><a href="<?php echo base_url()?>about">เกี่ยวกับเรา</a></li>
 								<li><a href="<?php echo base_url()?>contact"><?php echo lang('contact')?></a></li>
 							</ul>
 						</div>
@@ -146,3 +160,4 @@
 			</div>
 		</div><!--/header-bottom-->
 	</header><!--/header-->
+<?php }?>
