@@ -64,7 +64,7 @@ $autoload['libraries'] = array('database','session','xmlrpc','cart');
 |	$autoload['helper'] = array('url', 'file');
 */
 
-$autoload['helper'] = array('url', 'file' , 'form');
+$autoload['helper'] = array('url','file','form','language','cookie','string','date');
 
 
 /*
