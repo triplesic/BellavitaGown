@@ -3,7 +3,7 @@
 	type="text/javascript"
 	src="<?php echo base_url();?>js/order.js">
 
-	</script>
+</script>
 	<section>
 		<div class="container">
 			<div class="row">
@@ -11,22 +11,43 @@
 				<div class="col-sm-3">
 					<?php $this->load->view('template/left_category');?>
 				</div>
-			
-				<div class="col-sm-9 padding-right">
+			<!--  <img id="img_01" src="<?php echo base_url();?>images/small/image1.jpg" data-zoom-image="<?php echo base_url();?>images/large/image1.jpg"/> -->
+
+				<div class="col-sm-9">
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
-							<div class="view-product">
+						<table>
+							<tr>
+								<td>
+								<div>
 
-								<img src="<?php echo base_url();?>images/<?php echo $productDetail[0]->IMAGE_NAME?>" alt="" />
-								<input type="hidden" id="productImage" name="productImage" value="<?php echo $productDetail[0]->IMAGE_NAME?>"/>
-	<!-- 							<h3>ZOOM</h3> -->
-							</div>
+<!-- 								<img id="img_01" src="images/small/image1.jpg" data-zoom-image="images/large/image1.jpg"/>  -->
+									<img id="img_01" src="<?php echo base_url();?>images/small/<?php echo $productDetail[0]->IMAGE_NAME?>" data-zoom-image="<?php echo base_url();?>images/large/<?php echo $productDetail[0]->IMAGE_NAME?>"/>
+								
+  								<input type="hidden" id="productImage" name="productImage" value="<?php echo $productDetail[0]->IMAGE_NAME?>"/> 
+
+								</div>
+								</td>
+								<td valign="top">
+								<div >
+								<div id="gal1"> 
+									<?php foreach ($productDTLIMG as $image): ?>
+<!-- 								<a href="#" data-image="images/small/image1.jpg" data-zoom-image="images/large/image1.jpg"><img id="img_01" src="images/thumb/image1.jpg" /> </a> -->
+									<a href="#" data-image="<?php echo base_url();?>images/small/<?php echo $image->PRODUCT_DTL_IMG_NAME?>" data-zoom-image="<?php echo base_url();?>images/large/<?php echo $image->PRODUCT_DTL_IMG_NAME?>"> <img id="img_01" src="<?php echo base_url();?>images/thumb/<?php echo $image->PRODUCT_DTL_IMG_NAME?>"/> </a>
 							
+									<?php endforeach ?>	
+								</div>
+								</div>
+								</td>
+							</tr>
+						
+						</table>				
 							<div id="similar-product" class="carousel slide" data-ride="carousel">
 								
 								  <!-- Wrapper for slides -->
 								  
 								    <div class="carousel-inner">
+								    <h2 class="title text-center">สี</h2>	
 							<?php 	    
 							$amountProduct = count($productList);
 							
@@ -118,45 +139,48 @@
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
 								<img src="<?php echo base_url();?>images/product-details/new.jpg" class="newarrival" alt="" />
-								<h2><?php echo $productDetail[0]->PRODUCT_NM?>
-								<input type="hidden" id="productName" name="productName" value="<?php echo $productDetail[0]->PRODUCT_NM?>"/>
+								<h2><?php echo $productDetail[0]->PRODUCT_NM_TH?>
+								<input type="hidden" id="productName" name="productName" value="<?php echo $productDetail[0]->PRODUCT_NM_TH?>"/>
 								</h2>
-								<p><?php echo lang('code')?> : <?php echo $productDetail[0]->PRODUCT_DTL_ID?>
+								<p>Code : <?php echo $productDetail[0]->PRODUCT_DTL_ID?>
 								<input type="hidden" id="pddID" name="pddID" value="<?php echo $productDetail[0]->PRODUCT_DTL_ID?>"/>
 								</p>
 <!-- 								<img src="images/product-details/rating.png" alt="" /> -->
-								<span>
-									<span><?php echo $productDetail[0]->PRICE?>. <?php echo lang('baht')?>
+								<div>
+					<!-- 			<span><?php echo $productDetail[0]->PRICE?>. บาท-->
 									<input type="hidden" id="price" name="price" value="<?php echo $productDetail[0]->PRICE?>"/>
 									</span>	
-								</span>
+								</div>
 								
-								<p><b><?php echo lang('product')?></b> In Stock</p>
-								<p><b><?php echo lang('condition')?>:</b> New</p>
-								<p><b><?php echo lang('brand')?></b> Bella Vita Gown</p>
-								<p><b><?php echo lang('detail')?> :</b> <?php echo $productDetail[0]->DETAIL?></p>
-								<p><b><?php echo lang('color')?> :</b><?php echo $productDetail[0]->COLOR?>
+								<p><b>Availability:</b> In Stock</p>
+								<p><b>Condition:</b> New</p>
+								<p><b>Brand:</b> Bella Vita Gown</p>
+								<p><b>Detail :</b> <?php echo $productDetail[0]->DETAIL?></p>
+								<p><b>Color :</b><?php echo $productDetail[0]->COLOR?>
 								<input type="hidden" id="color" name="color" value="<?php echo $productDetail[0]->COLOR?>"/>
 								</p>
-								<p><b><?php echo lang('size')?> :</b> 
+								<p><b>Size :</b> 
 								
 								<select name="size" id="size"  style="width: 25%;">
    								<?php foreach($sizeList as $size){ ?>
-        							<option value="<?php echo $size->SIZE_ID?>"><?php echo $size->SIZE_NM?></option>';
+        							<option value="<?php echo $size->SIZE_ID?>"><?php echo $size->SIZE_NM?></option>;
     							<?php } ?>
 								</select>
 								
 								
 								 </p>
-								<p><b><?php echo lang('order_amount')?> :</b> <input type="text" placeholder="0" id="amountOrder" name="amountOrder"/></p>
-								<p><button type="button" onclick="addCart();"class="btn btn-fefault cart">
+								 <p></p>
+<!-- 								<p><b>จำนวนที่สั่ง :</b> <input type="text" placeholder="0" id="amountOrder" name="amountOrder"/></p> -->
+<p> </p>
+<br/>
+								<p>	<button type="button" onclick="addCart();"class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
-										<?php echo lang('add_to_cart')?>
+										Add to cart
 									</button>
 									
-									<button type="button" onclick="destroyCart();"class="btn btn-fefault cart">
+									<button type="button" onclick="inquiryPopup();"class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
-										Destroy
+										Contact Now
 									</button>
 									</p>
 <!-- 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a> -->
@@ -168,4 +192,13 @@
 				</div>
 			</div>
 		</div>
+			<script src='<?php echo base_url();?>js/jquery/jquery-1.8.3.min.js'></script>
+	<script src='<?php echo base_url();?>js/jquery/jquery.elevatezoom.js'></script>
+	<script>
+
+   $("#img_01").elevateZoom({gallery:'gal1', cursor: 'pointer', galleryActiveClass: 'active', imageCrossfade: true, loadingIcon: 'http://www.elevateweb.co.uk/spinner.gif'}); 
+   $("#img_01").bind("click", function(e) { var ez = $('#img_01').data('elevateZoom');	
+   $.fancybox(ez.getGalleryList()); return false; }); 
+
+	</script>
 	</section>

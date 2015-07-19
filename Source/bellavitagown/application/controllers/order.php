@@ -13,7 +13,8 @@ class Order extends BASE_Controller {
 	public function index()
 	{
 		$data['cartConten'] =  $this->cart->contents();
-		$this->render_page('order_view', $data);
+		$data['popup'] = false;
+		$this->render_page('order_view',$data);
 	}
 	
 	public function addCart()
@@ -29,10 +30,10 @@ class Order extends BASE_Controller {
 		$size = $this->input->post('size');
 		
 		$dataCart = array(
+			
 				'id'      => $id,
-				'qty'     => $qty,
-				'price'   => $price,
-				'total'	 => $qty*$price,	
+				'qty'     => 1,
+				'price'   => 1,	
 				'name'    => $name,
 				'image'   => $image,
 				'sizeID'  => $sizeID,
@@ -109,10 +110,10 @@ class Order extends BASE_Controller {
 		$userId = $session_data['userId'];
 		
 		$data['orderList'] = $this->order_model->getOrder($userId);
-		$this->render_page('order_confirm_view', $data);
+		$this->render_page('order_confirm_view',$data,false);
 	}
 	
-	
+
 	public function destroy()
 	{
 		$this->cart->destroy();
@@ -124,5 +125,20 @@ class Order extends BASE_Controller {
 		echo json_encode(array('status' => $status, 'cartTotal' => $cartTotal,'cartItem' => $cartItem ));
 	}
 	
-	
+	public function upload()
+	{
+		$upload_dir = "uploads/";
+		if (isset($_FILES["myfile"])) {
+			if ($_FILES["myfile"]["error"] > 0) {
+				echo "Error: " . $_FILES["file"]["error"] . "<br>";
+			} else {
+				move_uploaded_file($_FILES["myfile"]["tmp_name"], $upload_dir . $_FILES["myfile"]["name"]);
+				//echo "Uploaded File :" . $_FILES["myfile"]["name"];
+				echo "<pre>";
+				print_r($_POST);
+				print_r($_FILES);
+			}
+		}
+	}
+	// สมหมายสลักเพรช
 }

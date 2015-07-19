@@ -25,22 +25,5 @@ Class Catalog_Model extends CI_Model
 		$query = $this->db->get('catalog');
 		return $query->result();
 	}
-	
-	function getAllByLanguage($lang)
-	{
-		$sqlStr = '';
-		if($lang == "english")
-		{
-			$sqlStr = 'c.CATALOG_ID, c.CATALOG_NAME_EN CATALOG_NAME';
-		}
-		else
-		{
-			$sqlStr = 'c.CATALOG_ID, c.CATALOG_NAME CATALOG_NAME';
-		}
-		$this -> db -> select($sqlStr);
-		$this -> db -> from('catalog AS c');
-		$query = $this -> db -> get();
-		return $query->result();
-	}
 }
 ?>

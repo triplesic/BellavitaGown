@@ -1,22 +1,21 @@
+  
+
 function addCart()
 {
 
-	var amountOrder = $("#amountOrder").val();
 	var pddID = $("#pddID").val();
 	var productName = $("#productName").val();
 	var productImage = $("#productImage").val();
-	var price = $("#price").val();
 	var sizeID = $("#size").val();
 	var color = $("#color").val();
 
 	var e = document.getElementById("size");
 	var size = e.options[e.selectedIndex].text;
 	
-	console.log(amountOrder);
+
 	console.log(pddID);
 	console.log(productName);
 	console.log(productImage);
-	console.log(price);
 	console.log(sizeID);
 	console.log(size);
 	console.log(color);
@@ -26,26 +25,20 @@ function addCart()
 		url : getBaseURL() + "order/addCart",
 		dataType : "json",
 		data : {
-			qty : amountOrder,
 			id : pddID,
 			name : productName,
 			image : productImage,
-			price : price,
 			sizeID : sizeID,
-			size : size,
 			color : color
 		},
 		cache : false,
 		success : function(data) {
 			if (data.status == true) {
-				//<li id="showCart"><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> Cart (<?php echo $cartAmount; ?>)</a></li>
-				
-				 document.getElementById("showCart").innerHTML = '<a href="' + getBaseURL() + 'order"><i class="fa fa-shopping-cart"></i>Cart (' + data.cartAmount + ')</a>';
+
+				document.getElementById("showCart").innerHTML = '<a href="' + getBaseURL() + 'order"><i class="fa fa-shopping-cart"></i>Cart (' + data.cartAmount + ')</a>';
 				 console.log(data.conten);
 
-				//alert(data.msg);
-			//	$.unblockUI();
-				
+
 			} 
 			
 //			else if (data.status == false) {
@@ -55,8 +48,6 @@ function addCart()
 		}
 	});
 }
-
-
 
 function destroyCart()
 {
@@ -133,30 +124,13 @@ function deleteCart(rowID)
 }
 
 
-function confirmOrder()
+function inquiryPopup()
 {
-	alert("WORK!!!!!!!!!!!!!!!");
-	var winner_seq = 0;
-	$.ajax({
-		type : "POST",
-		url : getBaseURL() + "order/confirmOrder",
-		dataType : "json",
-		cache : false,
-		success : function(data) 
-		{
-			if (data.status == true) 
-			{
-				alert(data.msg);
-				window.location.href = getBaseURL() + "order/confirm";
-			} 
-			else if (data.status == false)
-			{
-				alert(data.msg);
-			}
-		}
-	});	
-
+	 cuteLittleWindow = window.open(getBaseURL()+'contact/inquiry' , "littleWindow", "location=no,width=850,height=600"); 
 }
+
+
+
 function getBaseURL() {
     var url = location.href;  // entire url including querystring - also: window.location.href;
     var baseURL = url.substring(0, url.indexOf('/', 14));

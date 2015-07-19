@@ -2520,4 +2520,22 @@ h2.title {
   color: #FE980F;
 }
 
-
+.containImage{
+width:900px;
+height:500px;
+margin:auto;
+border:solid 2px #000;
+}
+.containImage-left{
+background-color:#FFCCFF;
+float:left;
+width:500px;
+margin-left:30px;
+height:300px;
+}
+.containImage-right{
+background-color:#CC99CC;
+float:right;
+width:300px;
+margin-right:30px;
+height:300px;
