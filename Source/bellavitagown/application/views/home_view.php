@@ -19,7 +19,7 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="<?php echo base_url();?>/images/img01.jpg" class="girl img-responsive" alt="" />
+									<img src="<?php echo base_url();?>/images/slide/img01.jpg" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							<div class="item">
@@ -30,7 +30,7 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="<?php echo base_url();?>/images/img02.jpg" class="girl img-responsive" alt="" />
+									<img src="<?php echo base_url();?>/images/slide/img02.jpg" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							
@@ -42,7 +42,7 @@
 									<button type="button" class="btn btn-default get">Get it now</button>
 								</div>
 								<div class="col-sm-6">
-									<img src="<?php echo base_url();?>/images/img03.jpg" class="girl img-responsive" alt="" />
+									<img src="<?php echo base_url();?>/images/slide/img03.jpg" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							
@@ -80,7 +80,7 @@
 								<div class="single-products">
 									<div class="productinfo text-center">
 										<img src=<?php echo base_url();?>images/<?php echo $product->IMAGE_NAME?> alt="" />
-										<h2><?php echo $product->PRICE?></h2>
+										<p></p>
 										<p><?php echo $product->PRODUCT_NM?></p>
 										<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $product->PRODUCT_DTL_ID?>&pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
 										
@@ -116,7 +116,7 @@
 											<div class="single-products">
 												<div class="productinfo text-center">
 													<img src=<?php echo base_url();?>images/<?php echo $product->IMAGE_NAME?> alt="" />
-													<h2><?php echo $product->PRICE?></h2>
+													<p></p>
 													<p><?php echo $product->PRODUCT_NM?></p>
 													<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $product->PRODUCT_DTL_ID?>&pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
 													
