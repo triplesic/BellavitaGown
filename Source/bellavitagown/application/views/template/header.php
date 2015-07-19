@@ -78,7 +78,7 @@
 				<div class="row">
 					<div class="col-sm-4">
 						<div class="logo pull-left">
-							<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/home/logo.png" alt="" /></a>
+							<a href="<?php echo base_url();?>"><img src="<?php echo base_url();?>images/home/logo_new.png" alt="" /></a>
 						</div>
 						<div class="btn-group pull-right" style="margin-top: 1.3em;">
 							<div class="btn-group">
