@@ -146,12 +146,12 @@
                                     </ul>
                                 </li> 
 							<?php if($userData['userType'] == "admin"){?>
-                                <li><a href="<?php echo base_url()?>users/manage">จัดการผู้ใช้งาน</a></li>
-                                <li><a href="<?php echo base_url()?>product/manage">จัดการสินค้า</a></li>
+                                <li><a href="<?php echo base_url()?>users/manage"><?php echo lang('user_management')?></a></li>
+                                <li><a href="<?php echo base_url()?>product/manage"><?php echo lang('product_management')?></a></li>
                             <?php }else if($userData['userType'] == "user") {?>
                             	<li><a href="contact-us.html">Order</a></li>
                             <?php }?>
-                            	<li><a href="<?php echo base_url()?>about">เกี่ยวกับเรา</a></li>
+                            	<li><a href="<?php echo base_url()?>about"><?php echo lang('about_us')?></a></li>
 								<li><a href="<?php echo base_url()?>contact"><?php echo lang('contact')?></a></li>
 							</ul>
 						</div>

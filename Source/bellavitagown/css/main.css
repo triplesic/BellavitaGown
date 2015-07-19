@@ -2539,3 +2539,16 @@ float:right;
 width:300px;
 margin-right:30px;
 height:300px;
+}
+.v-center {
+    display:table !important;
+    height:200px;
+}
+
+.content {
+    display:table-cell;
+    vertical-align:middle;
+    text-align:center;
+    font-size: 18px;
+    color: rgb(111, 111, 111);
+}

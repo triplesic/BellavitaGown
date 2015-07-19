@@ -13,7 +13,7 @@
 				</div>
 			<!--  <img id="img_01" src="<?php echo base_url();?>images/small/image1.jpg" data-zoom-image="<?php echo base_url();?>images/large/image1.jpg"/> -->
 
-				<div class="col-sm-9">
+				<div class="col-sm-9 padding-right">
 					<div class="product-details"><!--product-details-->
 						<div class="col-sm-5">
 						<table>
@@ -139,10 +139,10 @@
 						<div class="col-sm-7">
 							<div class="product-information"><!--/product-information-->
 								<img src="<?php echo base_url();?>images/product-details/new.jpg" class="newarrival" alt="" />
-								<h2><?php echo $productDetail[0]->PRODUCT_NM_TH?>
-								<input type="hidden" id="productName" name="productName" value="<?php echo $productDetail[0]->PRODUCT_NM_TH?>"/>
+								<h2><?php echo $productDetail[0]->PRODUCT_NM?>
+								<input type="hidden" id="productName" name="productName" value="<?php echo $productDetail[0]->PRODUCT_NM?>"/>
 								</h2>
-								<p>Code : <?php echo $productDetail[0]->PRODUCT_DTL_ID?>
+								<p><?php echo lang('code')?> : <?php echo $productDetail[0]->PRODUCT_DTL_ID?>
 								<input type="hidden" id="pddID" name="pddID" value="<?php echo $productDetail[0]->PRODUCT_DTL_ID?>"/>
 								</p>
 <!-- 								<img src="images/product-details/rating.png" alt="" /> -->
@@ -152,14 +152,14 @@
 									</span>	
 								</div>
 								
-								<p><b>Availability:</b> In Stock</p>
-								<p><b>Condition:</b> New</p>
-								<p><b>Brand:</b> Bella Vita Gown</p>
-								<p><b>Detail :</b> <?php echo $productDetail[0]->DETAIL?></p>
-								<p><b>Color :</b><?php echo $productDetail[0]->COLOR?>
+								<p><b><?php echo lang('product')?></b> In Stock</p>
+								<p><b><?php echo lang('condition')?>:</b> New</p>
+								<p><b><?php echo lang('brand')?></b> Bella Vita Gown</p>
+								<p><b><?php echo lang('detail')?> :</b> <?php echo $productDetail[0]->DETAIL?></p>
+								<p><b><?php echo lang('color')?> :</b><?php echo $productDetail[0]->COLOR?>
 								<input type="hidden" id="color" name="color" value="<?php echo $productDetail[0]->COLOR?>"/>
 								</p>
-								<p><b>Size :</b> 
+								<p><b><?php echo lang('size')?> :</b> 
 								
 								<select name="size" id="size"  style="width: 25%;">
    								<?php foreach($sizeList as $size){ ?>
@@ -175,12 +175,12 @@
 <br/>
 								<p>	<button type="button" onclick="addCart();"class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
-										Add to cart
+										<?php echo lang('add_to_cart')?>
 									</button>
 									
 									<button type="button" onclick="inquiryPopup();"class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
-										Contact Now
+										<?php echo lang('contact_now')?>
 									</button>
 									</p>
 <!-- 								<a href=""><img src="images/product-details/share.png" class="share img-responsive"  alt="" /></a> -->

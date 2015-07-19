@@ -14,7 +14,7 @@ class Product extends BASE_Controller {
 	
 		$productDTLID = $this->input->get('pdID');
 		$productID = $this->input->get('pID');
-		$data['productDetail'] = $this->products_model->getProductDetail($productDTLID);
+		$data['productDetail'] = $this->products_model->getProductDetail($productDTLID, $this->getLanguage());
 		$data['productList'] = $this->products_model->getProduct($productID);
 		$data['sizeList'] = $this->size_model->getProductSize($productDTLID);
 		$data['productDTLIMG'] = $this->products_model->getProductImg($productDTLID);
