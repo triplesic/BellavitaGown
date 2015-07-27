@@ -1,8 +1,5 @@
-	<script
-	
-	type="text/javascript"
-	src="<?php echo base_url();?>js/order.js">
-
+<script	
+	type="text/javascript" src="<?php echo base_url();?>js/order.js">
 </script>
 	<section>
 		<div class="container">
@@ -15,11 +12,11 @@
 
 				<div class="col-sm-9 padding-right">
 					<div class="product-details"><!--product-details-->
-						<div class="col-sm-5">
+						<div class="col-sm-6">
 						<table>
 							<tr>
 								<td>
-								<div>
+								<div class="product-image-wrapper">
 
 <!-- 								<img id="img_01" src="images/small/image1.jpg" data-zoom-image="images/large/image1.jpg"/>  -->
 									<img id="img_01" src="<?php echo base_url();?>images/small/<?php echo $productDetail[0]->IMAGE_NAME?>" data-zoom-image="<?php echo base_url();?>images/large/<?php echo $productDetail[0]->IMAGE_NAME?>"/>
@@ -81,7 +78,7 @@
 									if($i>=0 && $i<=3)	
 									{
 							?>	
-										<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $productList[$i-1]->PRODUCT_DTL_ID?>&pID=<?php echo $productList[$i-1]->PRODUCT_ID?>"><img src="<?php echo base_url();?>images/<?php echo $productList[$i-1]->IMAGE_NAME?>" alt="" style="width: 25%; height: 25%;"></a>
+										<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $productList[$i-1]->PRODUCT_DTL_ID?>&pID=<?php echo $productList[$i-1]->PRODUCT_ID?>"><img src="<?php echo base_url();?>images/thumb/<?php echo $productList[$i-1]->IMAGE_NAME?>" alt="" style="width: 25%; height: 25%;"></a>
 							<?php }?>	
 										
 							<?php 			
@@ -108,7 +105,7 @@
 									if($i > 3)
 									{
 									?>
-										  <a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $productList[$i-1]->PRODUCT_DTL_ID?>&pID=<?php echo $productList[$i-1]->PRODUCT_ID?>&clrID=<?php echo $productList[$i-1]->COLOR_ID?>"><img src="<?php echo base_url();?>images/<?php echo $productList[$i-1]->IMAGE_NAME?>" alt="" style="width: 25%; height: 25%;"></a>
+										  <a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $productList[$i-1]->PRODUCT_DTL_ID?>&pID=<?php echo $productList[$i-1]->PRODUCT_ID?>&clrID=<?php echo $productList[$i-1]->COLOR_ID?>"><img src="<?php echo base_url();?>images/thumb/<?php echo $productList[$i-1]->IMAGE_NAME?>" alt="" ></a>
 
 									<?php }?>
 									
@@ -136,7 +133,7 @@
 							</div>
 
 						</div>
-						<div class="col-sm-7">
+						<div class="col-sm-6">
 							<div class="product-information"><!--/product-information-->
 								<img src="<?php echo base_url();?>images/product-details/new.jpg" class="newarrival" alt="" />
 								<h2><?php echo $productDetail[0]->PRODUCT_NM?>
@@ -192,7 +189,7 @@
 				</div>
 			</div>
 		</div>
-			<script src='<?php echo base_url();?>js/jquery/jquery-1.8.3.min.js'></script>
+	
 	<script src='<?php echo base_url();?>js/jquery/jquery.elevatezoom.js'></script>
 	<script>
 

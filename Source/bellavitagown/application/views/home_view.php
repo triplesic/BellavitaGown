@@ -79,7 +79,7 @@
 							<div class="product-image-wrapper">
 								<div class="single-products">
 									<div class="productinfo text-center">
-										<img src=<?php echo base_url();?>images/<?php echo $product->IMAGE_NAME?> alt="" />
+										<img src=<?php echo base_url();?>images/small/<?php echo $product->IMAGE_NAME?> alt="" />
 										<p></p>
 										<p><?php echo $product->PRODUCT_NM?></p>
 										<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $product->PRODUCT_DTL_ID?>&pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
@@ -115,7 +115,7 @@
 										<div class="product-image-wrapper">
 											<div class="single-products">
 												<div class="productinfo text-center">
-													<img src=<?php echo base_url();?>images/<?php echo $product->IMAGE_NAME?> alt="" />
+													<img src=<?php echo base_url();?>images/small/<?php echo $product->IMAGE_NAME?> alt="" />
 													<p></p>
 													<p><?php echo $product->PRODUCT_NM?></p>
 													<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $product->PRODUCT_DTL_ID?>&pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
