@@ -2552,3 +2552,5 @@ height:300px;
     font-size: 18px;
     color: rgb(111, 111, 111);
 }
+
+.slidingDiv{overflow:visible!important}

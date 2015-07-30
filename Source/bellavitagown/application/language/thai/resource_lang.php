@@ -44,4 +44,5 @@ $lang['about_us']="เกี่ยวกับเรา";
 $lang['product_management']="จัดการสินค้า";
 $lang['user_management']="จัดการผู้ใช้งาน";
 $lang['contact_now']="ติดต่อสั่งซื้อ";
+$lang['forgot_password']="ลืมรหัสผ่าน";
 ?>

@@ -44,4 +44,5 @@ $lang['about_us']="ABOUT US";
 $lang['product_management']="PRODUCT MANAGEMENT";
 $lang['user_management']="USER MANAGEMENT";
 $lang['contact_now']="Contact now";
+$lang['forgot_password']="FORGOT PASSWORD";
 ?>

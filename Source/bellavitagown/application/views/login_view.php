@@ -21,7 +21,8 @@
 									<div class="col-sm-6">
 								<button type="submit" class="btn btn-default"><?php echo lang('login')?></button>
 								</div>
-								<div class="col-sm-6"><a href="#" class="show_hide">ลืมรหัสผ่าน</a>
+								<div class="col-sm-6">
+								<button type="button" class="btn btn-default show_hide"><?php echo lang('forgot_password')?></button>
 								</div>
 								
 							</div>
