@@ -7,23 +7,16 @@
 
 <section id="cart_items">
 		<div class="container">
-			<div class="breadcrumbs">
-				<ol class="breadcrumb">
-				  <li><a href="#">Home</a></li>
-				  <li class="active">Shopping Cart</li>
-				</ol>
-			</div>
+			
 			<div class="table-responsive cart_info">
 				<table class="table table-condensed">
 					<thead>
-
 						<tr class="cart_menu">
 							<td class="image">Item</td>
-							<td class="description"></td>
+							<td class="description" align="left"></td>
 							<td class="price" align="center">Color</td>
-							<td class="price" align="center">Size</td>
-							<td class="price" align="center">Send an Inquiry to this supplier</td>
-							<td></td>
+							<td class="quantity" align="center">Size</td>
+							<td align="right"></td>
 						</tr>
 					</thead>
 					<tbody>
@@ -36,7 +29,7 @@
 								<a href=""><img src=<?php echo base_url();?>images/<?php echo $cart['image']?> alt="" style="width: 150px;"></a>
 							</td>
 							<td class="cart_description">
-								<h4><a href=""><?php echo $cart['name']?></a></h4>
+								<h4><?php echo $cart['name']?></h4>
 								<p>Web ID: <?php echo $cart['id']?></p>
 							<!--  	<p>Row ID: <?php echo $cart['rowid']?></p>-->
 							</td>
@@ -63,24 +56,28 @@
 								
 								</p>
 							</td>
-							<td class="cart_price" align="center">
-							
-							<button class="btn btn-default get" onclick="inquiryPopup();">Contact Now</button>
-							
-							</td>
-							<td class="cart_delete">
-								<a class="cart_quantity_delete" onclick="deleteCart('<?php echo $cart['rowid']?>')" href="javascript:void(0);"><i class="fa fa-times"></i></a>
-							</td>
-							
+
+							<td class="cart_delete" align="right" >
+								<a onclick="deleteCart('<?php echo $cart['rowid']?>')" href="javascript:void(0);"><i class="fa fa-times"></i></a>
+							</td>				
 						</tr>
 
 			<?php endforeach ?>	
-			
-						
+			<tr>
+							
+							<td colspan="5"align="right"  >
+								<table >
+									
+									<tr>
+										<td align="right" ><span>* </span>หากคุณสนใจสินค้าโปรดส่งข้อมูลของคุณ<br/><div style="position:fix;right:20px;"><button class="btn btn-default get" onclick="inquiryPopup();">Contact Now</button></div>
+										</td>			
+									</tr>
+								</table>
+							</td>
+				</tr>
 					</tbody>
-				</table>
-				
-				
+				</table>				
+			</div >
 			</div>
-		</div>
+			
 	</section> <!--/#cart_items-->
