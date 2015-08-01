@@ -48,17 +48,17 @@ function getProductDetail($product_DTL_ID, $lang)
  		$sqlStr = '';
 		if($lang == "english")
 		{
-			$sqlStr = 'p.PRODUCT_ID,p.PRODUCT_NM_EN PRODUCT_NM,p.PRICE,pd.PRODUCT_DTL_ID,pd.IMAGE_NAME,pd.DETAIL_EN DETAIL,pd.COLOR,pd.SIZE';
+			$sqlStr = 'p.PRODUCT_ID,p.PRODUCT_NM_EN PRODUCT_NM,p.PRICE,pd.PRODUCT_DTL_ID,pd.IMAGE_NAME,pd.DETAIL_EN DETAIL,c.COLOR_NM_EN COLOR,pd.SIZE';
 		}
 		else
 		{
-			$sqlStr = 'p.PRODUCT_ID,p.PRODUCT_NM_TH PRODUCT_NM,p.PRICE,pd.PRODUCT_DTL_ID,pd.IMAGE_NAME,pd.DETAIL DETAIL,pd.COLOR,pd.SIZE';
+			$sqlStr = 'p.PRODUCT_ID,p.PRODUCT_NM_TH PRODUCT_NM,p.PRICE,pd.PRODUCT_DTL_ID,pd.IMAGE_NAME,pd.DETAIL DETAIL,c.COLOR_NM_TH COLOR,pd.SIZE';
 		}
 
  	$this -> db -> select($sqlStr);
  	$this -> db -> from('product_dtl AS pd');
  	$this -> db -> join('product AS p' , 'p.PRODUCT_ID = pd.PRODUCT_ID', 'left');
-
+ 	$this -> db -> join('colors AS c' , 'c.COLOR_ID = pd.COLOR_ID', 'left');
  	$this -> db -> where('pd.PRODUCT_DTL_ID = '  . $product_DTL_ID );
  	
  	$query = $this -> db -> get();
