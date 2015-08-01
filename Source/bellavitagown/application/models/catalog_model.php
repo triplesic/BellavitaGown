@@ -39,6 +39,7 @@ Class Catalog_Model extends CI_Model
 		}
 		$this -> db -> select($sqlStr);
 		$this -> db -> from('catalog AS c');
+		$this -> db -> order_by('c.CATALOG_ID', 'asc');
 		$query = $this -> db -> get();
 		return $query->result();
 	}
