@@ -2400,6 +2400,7 @@ h2.title {
 
 .blank-arrow {
   position: relative;
+  top: 7px;
 }
 
 .blank-arrow label:after {
@@ -2554,3 +2555,10 @@ height:300px;
 }
 
 .slidingDiv{overflow:visible!important}
+
+.error span {
+  color: #FE980F;
+  float: right;
+  font-weight: 700;
+  margin-top: -10px;
+}
