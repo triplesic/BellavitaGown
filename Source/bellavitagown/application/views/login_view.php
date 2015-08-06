@@ -1,31 +1,31 @@
 <script src="<?php echo base_url();?>js/login.js"></script>
-<section id="slider">
+
 	<div class="container">
 		<div class="row">
-			<div class="col-sm-4 col-sm-offset-1">
+			<div class="col-sm-5">
 				<div class="login-form">
 					<!--login form-->
-					<h2><?php echo lang('login_to_your_account')?></h2>
-					<input type="hidden" id="popup" name="popup"
-						value="<?php echo $popup;?>" />
-					<div class="replay-box">
+					<h2 class="title text-center"><?php echo lang('login_to_your_account')?></h2>
+					<input type="hidden" id="popup" name="popup" value="<?php echo $popup;?>" />
+					
 						<form id="login-form" method="post" action="#">
 							<div class="col-sm-12">
 								<div class="blank-arrow" id="div-login-name"></div>
 								<input type="text" placeholder="<?php echo lang('email')?>"
 									id="username" name="username" />
+							</div>
+							<div class="col-sm-12">
 								<div id="div-login-pass"></div>
-								<input type="password"
-									placeholder="<?php echo lang('password')?>" id="password"
-									name="password" />
-									<div class="col-sm-6">
+								<input type="password" placeholder="<?php echo lang('password')?>" id="password" name="password" />
+								</div>
+								<div class="col-sm-8" align="right">
 								<button type="submit" class="btn btn-default"><?php echo lang('login')?></button>
 								</div>
-								<div class="col-sm-6">
+								<div class="col-sm-4">
 								<button type="button" class="btn btn-default show_hide"><?php echo lang('forgot_password')?></button>
 								</div>
 								
-							</div>
+							
 						</form>
 						
 						<div class="slidingDiv">
@@ -44,28 +44,21 @@
 					</div>
 				</div>
 
+				<div class="col-sm-1">
+					<h2 class="or">OR</h2>
+				</div>
 
-
-			</div>
-			<div class="col-sm-1">
-				<h2 class="or"><?php echo lang('or')?></h2>
-			</div>
-			<div class="col-sm-4">
+			<div class="col-sm-6">
 				<div class="signup-form">
-					<!--sign up form-->
-					<h2><?php echo lang('new_user_signup')?></h2>
-					<div class="replay-box">
+					<h2 class="title text-center"><?php echo lang('new_user_signup')?></h2>
 						<form id="register-form" method="post" action="#">
-
 							<div class="col-sm-6">
 								<div id="div-register-firstName"></div>
-								<input type="text" id="firstName" name="firstName"
-									placeholder="ชื่อ" />
+								<input type="text" id="firstName" name="firstName" placeholder="ชื่อ" />
 							</div>
 							<div class="col-sm-6">
 								<div id="div-register-lastName"></div>
-								<input type="text" id="lastName" name="lastName"
-									placeholder="นามสกุล" />
+								<input type="text" id="lastName" name="lastName" placeholder="นามสกุล" />
 							</div>
 							<div class="col-sm-12">
 								<div id="div-register-email"></div>
@@ -80,14 +73,14 @@
 								<div id="div-register-address"></div>
 								<textarea name="address" id="address" rows="5"
 									placeholder=" <?php echo lang('contact_info')?>"></textarea>
-								<button type="submit" class="btn btn-default"><?php echo lang('signup')?></button>
+								
+							</div >
+							<div></div>
+							<div class="col-sm-12" align="right" >
+							<button type="submit" class="btn btn-default"><?php echo lang('signup')?></button>
 							</div>
 						</form>
-					</div>
 				</div>
-				<!--/sign up form-->
 			</div>
 		</div>
-	</div>
-
-</section>
+		</div>

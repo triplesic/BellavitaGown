@@ -7,7 +7,7 @@
 
 <section id="cart_items">
 		<div class="container">
-			
+	 <form class="cmxform form-horizontal col-sm-12" id="inquiry-form" method="post" action="#">		
 			<div class="table-responsive cart_info">
 				<table class="table table-condensed">
 					<thead>
@@ -78,6 +78,8 @@
 					</tbody>
 				</table>				
 			</div >
+			
+			</form>
 			</div>
 			
 	</section> <!--/#cart_items-->
