@@ -1,9 +1,9 @@
 <script src="<?php echo base_url();?>js/login.js"></script>
-
+<div class="header-middle">
 	<div class="container">
 		<div class="row">
 			<div class="col-sm-5">
-				<div class="login-form">
+				<div class="signup-form">
 					<!--login form-->
 					<h2 class="title text-center"><?php echo lang('login_to_your_account')?></h2>
 					<input type="hidden" id="popup" name="popup" value="<?php echo $popup;?>" />
@@ -17,15 +17,15 @@
 							<div class="col-sm-12">
 								<div id="div-login-pass"></div>
 								<input type="password" placeholder="<?php echo lang('password')?>" id="password" name="password" />
-								</div>
-								<div class="col-sm-8" align="right">
-								<button type="submit" class="btn btn-default"><?php echo lang('login')?></button>
-								</div>
-								<div class="col-sm-4">
-								<button type="button" class="btn btn-default show_hide"><?php echo lang('forgot_password')?></button>
-								</div>
-								
+							</div>
 							
+							<div class="col-sm-6" align="left">
+							<button type="button" class="btn btn-default show_hide"><?php echo lang('forgot_password')?></button>
+							
+							</div >	
+							<div class="col-sm-6" align="right">
+							<button type="submit" class="btn btn-default"><?php echo lang('login')?></button>
+							</div>
 						</form>
 						
 						<div class="slidingDiv">
@@ -75,12 +75,12 @@
 									placeholder=" <?php echo lang('contact_info')?>"></textarea>
 								
 							</div >
-							<div></div>
 							<div class="col-sm-12" align="right" >
 							<button type="submit" class="btn btn-default"><?php echo lang('signup')?></button>
 							</div>
 						</form>
 				</div>
 			</div>
+		</div>
 		</div>
 		</div>
