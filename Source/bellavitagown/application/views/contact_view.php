@@ -6,9 +6,7 @@
 					<strong><?php echo lang('contact_us')?></strong>
 				</h2>
 			</div>
-		</div>
 		
-		<div class="row">		
 			<div class="col-sm-8" style="text-align: center;">
 				<div id="gmap" class="contact-map">
 					<iframe

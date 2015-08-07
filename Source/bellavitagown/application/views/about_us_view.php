@@ -2,11 +2,6 @@
 	<div class="bg">
 		<div class="row">
 			<div class="col-sm-12" style="text-align: center;">
-				<div class="logo center">
-					
-				</div>
-			</div>
-			<div class="col-sm-12" style="text-align: center;">
 				<h2 class="title text-center">
 					<strong><?php echo lang('about_us')?></strong>
 				</h2>
