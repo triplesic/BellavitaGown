@@ -49,7 +49,7 @@ function getBaseURL() {
         var index2 = url.indexOf("/", index1 + 1);
         var baseLocalUrl = url.substr(0, index2);
 
-        return baseLocalUrl + "/Source/bellavitagown/";
+        return baseLocalUrl + "/";
     }
     else {
         // Root Url for domain name

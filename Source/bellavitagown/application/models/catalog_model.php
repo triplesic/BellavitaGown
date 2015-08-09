@@ -10,7 +10,7 @@ Class Catalog_Model extends CI_Model
 		$this -> db -> select('c.CATALOG_NAME,p.PRODUCT_ID,p.PRODUCT_NM_TH,p.PRODUCT_NM_EN,p.PRICE,pd.PRODUCT_DTL_ID,pd.IMAGE_NAME');
 		$this -> db -> from('catalog AS c');
 		$this -> db -> join('product AS p' , 'p.CATALOG_ID = c.CATALOG_ID');
-		$this -> db -> join('Product_dtl AS pd' , 'pd.PRODUCT_ID = p.PRODUCT_ID');
+		$this -> db -> join('product_dtl AS pd' , 'pd.PRODUCT_ID = p.PRODUCT_ID');
 		$this -> db -> where('c.CATALOG_ID = ' . "'" . $catalog_ID . "'");	
 		$this->db->group_by('pd.PRODUCT_ID');
 		$this->db->order_by('pd.PRODUCT_ID', 'desc');
