@@ -15,9 +15,9 @@
 					</iframe>
 				</div>
 			</div>
-			<div class="col-sm-4" style="text-align: left;">
+			<div class="col-sm-4" ">
 			<div class="contact-info">
-					<h2 class="title text-center"><?php echo lang('contact_info')?></h2>
+					<h2 class="title text-center">ที่ตั้งบริษัท</h2>
 					<address>
 						<p>Bella Vita Co.,Ltd.</p>
 						<p><?php echo lang('address_1')?></p>
@@ -26,8 +26,9 @@
 						<p><?php echo lang('phone')?>: (66)2-416-0314</p>
 						<p><?php echo lang('phone')?>: (66)2-895-0013-4</p>
 						<p><?php echo lang('email')?>: bellavita_gown@hotmail.com</p>
-						<p><span>* </span>หากคุณสนใจสินค้าโปรดส่งข้อมูลของคุณ</p>
-						<p align="center"><button class="btn btn-default get" onclick="inquiryPopup();">Contact Now</button></p>
+						
+						<div align="left"><button class="btn btn-default get" onclick="inquiryPopup();">Contact Now</button></div>
+						<div class="contact"><span>* </span>หากคุณสนใจสินค้าโปรดส่งข้อมูลของคุณ</div>
 					</address>
 					<div class="social-networks">
 						<h2 class="title text-center">Social Networking</h2>
