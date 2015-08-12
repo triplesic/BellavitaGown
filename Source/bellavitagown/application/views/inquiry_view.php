@@ -1,11 +1,5 @@
 <script src="<?php echo base_url();?>js/inquiry.js"></script>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <title>jQuery Validation Plugin Examples</title>
-    </head>
 
-    <body>
         <!-- Custom error messages and placement -->
 			<div class="step-one">
 				<h2 class="heading">ยินดีต้องรับคุณ <?php echo $firstName; ?> <?php echo $lastName; ?> ส่งข้อความเพื่อติดต่อเรา หรือโทรหาเรา 089-XXX-XXXX</h2>
@@ -33,7 +27,8 @@
 										<label>Email Address</label>
 									</div>
 									<input type="text" placeholder="your email address..." name= "inq-email" id = "inq-email">
-									</div>
+							<div align="left"><span>* ข้อมูลที่จำเป็นต้องกรอก</span></div>
+							</div>
 							<div class="col-sm-8">
 								
 									<div class="blank-arrow">
@@ -44,10 +39,8 @@
 									<button  class="btn btn-primary pull-right">Submit</button>
 							
 							</div>
-							<div id="div-inq-warning"><span>* ข้อมูลที่จำเป็นต้องกรอก</span></div>
+							
 						</div>
 						
         		</div>      
-        </form>
-    </body>
-</html>
+ </form>

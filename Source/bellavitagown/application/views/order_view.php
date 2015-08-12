@@ -66,13 +66,9 @@
 			<tr>
 							
 							<td colspan="5"align="right"  >
-								<table >
-									
-									<tr>
-										<td align="right" ><span>* </span>หากคุณสนใจสินค้าโปรดส่งข้อมูลของคุณ<br/><div style="position:fix;right:20px;"><button class="btn btn-default get" onclick="inquiryPopup();">Contact Now</button></div>
-										</td>			
-									</tr>
-								</table>
+							
+										<div class="contact"><span>* </span>หากคุณสนใจสินค้าโปรดส่งข้อมูลของคุณ<br/><button class="btn btn-default get" onclick="inquiryPopup();">Contact Now</button></div>
+
 							</td>
 				</tr>
 					</tbody>
