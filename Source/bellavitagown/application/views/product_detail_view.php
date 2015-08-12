@@ -141,7 +141,6 @@
 						</div>
 						<div class="col-sm-6">
 							<div class="product-information"><!--/product-information-->
-								<img src="<?php echo base_url();?>images/product-details/new.jpg" class="newarrival" alt="" />
 								<h2><?php echo $productDetail[0]->PRODUCT_NM?>
 								<input type="hidden" id="productName" name="productName" value="<?php echo $productDetail[0]->PRODUCT_NM?>"/>
 								</h2>
