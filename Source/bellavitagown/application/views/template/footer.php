@@ -18,7 +18,7 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="single-widget">
-							<h2>สมาชิก</h2>
+							<h2><?php echo lang('member');?></h2>
 							
 							<ul class="nav nav-pills nav-stacked">
 								<?php  if($userData['userType'] == NULL){?>
@@ -39,7 +39,7 @@
 					</div>
 					<div class="col-sm-3">
 						<div class="single-widget">
-							<h2>ติดตามเรา</h2>
+							<h2><?php echo lang('follow_us');?></h2>
 							<div class="nav nav-pills nav-stacked social-networks" style="text-align: left;">
 								<ul>
 									<li><a href="#"><i class="fa fa-facebook"></i></a></li>

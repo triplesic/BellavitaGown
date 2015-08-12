@@ -45,4 +45,6 @@ $lang['product_management']="PRODUCT MANAGEMENT";
 $lang['user_management']="USER MANAGEMENT";
 $lang['contact_now']="Contact now";
 $lang['forgot_password']="FORGOT PASSWORD";
+$lang['member']="Member";
+$lang['follow_us']="Follow Us";
 ?>
