@@ -106,7 +106,7 @@
 								<li><?php echo anchor('login', '<i class="fa fa-lock"></i>'.lang('login'));?></li>
 						<?php }else { ?>
 								<li><a href="<?php echo base_url();?>users/info"><i class="fa fa-user"></i><?php echo $userData['firstName']; ?> <?php echo $userData['lastName']; ?></a></li>
-								<li><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> Cart (<?php echo $cartAmount; ?>)</a></li>
+								<li><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> <?php echo lang('cart');?> (<?php echo $cartAmount; ?>)</a></li>
 								<li><?php echo anchor('login/logout', '<i class="fa fa-lock"></i>'.lang('logout'));?></li>
 							<?php }?>	
 								</li>

@@ -1,6 +1,12 @@
 <script	
 	type="text/javascript" src="<?php echo base_url();?>js/order.js">
 </script>
+<script>
+	function addCartOrder(){
+		var cartStr = <?php echo json_encode(lang('cart')); ?>;
+		addCart(cartStr);
+	}
+</script>
 	<section>
 		<div class="container">
 			<div class="row">
@@ -170,7 +176,7 @@
 <!-- 								<p><b>จำนวนที่สั่ง :</b> <input type="text" placeholder="0" id="amountOrder" name="amountOrder"/></p> -->
 <p> </p>
 <br/>
-								<p>	<button type="button" onclick="addCart();"class="btn btn-fefault cart">
+								<p>	<button type="button" onclick="addCartOrder();"class="btn btn-fefault cart">
 										<i class="fa fa-shopping-cart"></i>
 										<?php echo lang('add_to_cart')?>
 									</button>
