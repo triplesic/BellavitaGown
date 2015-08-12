@@ -1,6 +1,4 @@
-  
-
-function addCart()
+function addCart(cartStr)
 {
 
 	var pddID = $("#pddID").val();
@@ -35,7 +33,7 @@ function addCart()
 		success : function(data) {
 			if (data.status == true) {
 
-				document.getElementById("showCart").innerHTML = '<a href="' + getBaseURL() + 'order"><i class="fa fa-shopping-cart"></i>Cart (' + data.cartAmount + ')</a>';
+				document.getElementById("showCart").innerHTML = '<a href="' + getBaseURL() + 'order"><i class="fa fa-shopping-cart"></i>' + cartStr + ' (' + data.cartAmount + ')</a>';
 				 console.log(data.conten);
 
 

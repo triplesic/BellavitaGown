@@ -466,7 +466,7 @@ ul.sub-menu {
 }
 
 .footer-widget {
-  margin-bottom: 68px;
+  margin-bottom: 2em;
 }
 
 .footer-widget .container {
@@ -479,7 +479,7 @@ ul.sub-menu {
   font-family: 'Roboto', sans-serif;
   font-size: 16px;
   font-weight: 500;
-  margin-bottom: 22px;
+/*   margin-bottom: 22px; */
   text-transform: uppercase;
 }
 
