@@ -100,7 +100,7 @@
 								<?php  if($userData['userType'] == NULL){?>
 								
 								
-								<li id="showCart"><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i> <?php echo lang('cart');?> (<?php echo $cartAmount; ?>)</a></li>
+								<li id="showCart"><a href="<?php echo base_url()."order"?>"><i class="fa fa-shopping-cart"></i><?php echo lang('cart');?> (<?php echo $cartAmount; ?>)</a></li>
 								
 								
 								<li><?php echo anchor('login', '<i class="fa fa-lock"></i>'.lang('login'));?></li>
