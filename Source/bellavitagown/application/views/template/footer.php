@@ -42,10 +42,14 @@
 							<h2><?php echo lang('follow_us');?></h2>
 							<div class="nav nav-pills nav-stacked social-networks" style="text-align: left;">
 								<ul>
-									<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#"><i class="fa fa-twitter"></i></a></li>
+									<li><a href="http://www.facebook.com/bellavita.bestqualitygown" target="_blank"><i class="fa fa-facebook"></i></a></li>
+									<li><a href="#">
+											<i class="fa fa-line" style="display: inline-block; padding: 0px 15px;">
+												<img src="<?php echo base_url();?>images/line_logo_black.png" alt="" style="height: 1.2em;"/>
+											</i>
+										</a>
+									</li>
 									<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-									<li><a href="#"><i class="fa fa-youtube"></i></a></li>
 								</ul>
 							</div>
 						</div>
@@ -72,10 +76,10 @@
 		
 		<div class="footer-bottom">
 			<div class="container">
-				<div class="row">
-					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p>
-					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p>
-				</div>
+<!-- 				<div class="row"> -->
+<!-- 					<p class="pull-left">Copyright © 2013 E-SHOPPER Inc. All rights reserved.</p> -->
+<!-- 					<p class="pull-right">Designed by <span><a target="_blank" href="http://www.themeum.com">Themeum</a></span></p> -->
+<!-- 				</div> -->
 			</div>
 		</div>
 		

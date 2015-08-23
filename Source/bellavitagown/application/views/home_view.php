@@ -82,7 +82,7 @@
 										<img src=<?php echo base_url();?>images/small/<?php echo $product->IMAGE_NAME?> alt="" />
 										<p></p>
 										<p><?php echo $product->PRODUCT_NM?></p>
-										<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $product->PRODUCT_DTL_ID?>&pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
+										<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $product->PRODUCT_DTL_ID?>&pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><?php echo lang('detail')?></a>
 										
 									</div>
 								</div>
@@ -118,7 +118,7 @@
 													<img src=<?php echo base_url();?>images/small/<?php echo $product->IMAGE_NAME?> alt="" />
 													<p></p>
 													<p><?php echo $product->PRODUCT_NM?></p>
-													<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $product->PRODUCT_DTL_ID?>&pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i>ดูรายละเอียด</a>
+													<a href="<?php echo base_url();?>product/detail/json?pdID=<?php echo $product->PRODUCT_DTL_ID?>&pID=<?php echo $product->PRODUCT_ID?>" class="btn btn-default add-to-cart"><i class="fa fa-shopping-cart"></i><?php echo lang('detail')?></a>
 													
 												</div>												
 											</div>
