@@ -115,6 +115,9 @@ a#scrollUp i{
   -o-transition: all 0.9s ease 0s;
 }
 
+.fa-line:hover {
+  background: #01c300;
+}
 
 .fa-facebook:hover {
   background: #0083C9;

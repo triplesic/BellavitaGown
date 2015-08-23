@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
-    <title>Home | E-Shopper</title>
+    <title>Bellavita Gown</title>
     
     <link href="<?php echo base_url();?>css/bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url();?>css/font-awesome.min.css" rel="stylesheet">
@@ -61,10 +61,13 @@
 					<div class="col-sm-6">
 						<div class="social-icons pull-right">
 							<ul class="nav navbar-nav">
-								<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-								<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-								<li><a href="#"><i class="fa fa-linkedin"></i></a></li>
-								<li><a href="#"><i class="fa fa-dribbble"></i></a></li>
+								<li><a href="http://www.facebook.com/bellavita.bestqualitygown" target="_blank"><i class="fa fa-facebook"></i></a></li>
+								<li><a href="#">
+										<i class="fa fa-line" style="display: inline-block; padding: 10px 15px;">
+											<img src="<?php echo base_url();?>images/line_logo_black.png" alt="" style="height: 1.2em;"/>
+										</i>
+									</a>
+								</li>
 								<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
 							</ul>
 						</div>
