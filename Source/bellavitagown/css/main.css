@@ -45,7 +45,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .navbar-toggle {
-  background-color: #000;
+  background-color: #f8941d;
 }
 
 a#scrollUp {
@@ -2573,4 +2573,19 @@ height:300px;
   color: #FE980F;
   font-weight: 700;
   
+}
+
+@media (max-width: 979px)
+.navbar-fixed-top, .navbar-fixed-bottom {
+  position: static;
+}
+
+.mainmenu ul.in > li {
+  background-color: #FFFFFF;
+  text-align: right;
+}
+
+.mainmenu ul.in > li a {
+  color: #FE980F;
+  font-weight: bold;
 }

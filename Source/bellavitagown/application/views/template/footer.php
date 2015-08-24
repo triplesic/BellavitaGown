@@ -43,7 +43,7 @@
 							<div class="nav nav-pills nav-stacked social-networks" style="text-align: left;">
 								<ul>
 									<li><a href="http://www.facebook.com/bellavita.bestqualitygown" target="_blank"><i class="fa fa-facebook"></i></a></li>
-									<li><a href="#">
+									<li><a href="http://line.me/ti/p/~bnandbv" target="_blank">
 											<i class="fa fa-line" style="display: inline-block; padding: 0px 15px;">
 												<img src="<?php echo base_url();?>images/line_logo_black.png" alt="" style="height: 1.2em;"/>
 											</i>
