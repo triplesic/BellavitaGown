@@ -12,37 +12,19 @@
 						
 						<div class="carousel-inner">
 							<div class="item active">
-								<div class="col-sm-6">
-									<h1><span>Supreme</span> In Design</h1>
-									<h2>OHS004TSTWH</h2>
-									<p>เสื้อปกฮาวายตัวยาวแขนสั้นสีขาว </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="<?php echo base_url();?>/images/slide/img01.jpg" class="girl img-responsive" alt="" />
+								<div class="col-sm-12">
+									<img src="<?php echo base_url();?>/images/promotion01.png" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>BV</span>013TSLR </h1>
-									<h2>สีแดงเลือดหมู</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="<?php echo base_url();?>/images/slide/img02.jpg" class="girl img-responsive" alt="" />
+								<div class="col-sm-12">
+									<img src="<?php echo base_url();?>/images/promotion02.png" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							
 							<div class="item">
-								<div class="col-sm-6">
-									<h1><span>NBE</span>006TSLGL</h1>
-									<h2>เสื้อผ่าตัดเล็กสีเขียว</h2>
-									<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. </p>
-									<button type="button" class="btn btn-default get">Get it now</button>
-								</div>
-								<div class="col-sm-6">
-									<img src="<?php echo base_url();?>/images/slide/img03.jpg" class="girl img-responsive" alt="" />
+								<div class="col-sm-12">
+									<img src="<?php echo base_url();?>/images/promotion03.png" class="girl img-responsive" alt="" />
 								</div>
 							</div>
 							
